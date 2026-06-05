@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #faf8f5;
+  --color-cream-dark: #f0ebe3;
+  --color-petrol: #1a4a52;
+  --color-petrol-light: #2a6570;
+  --color-petrol-dark: #0f3339;
+  --color-gold: #c4a35a;
+  --color-gold-light: #d4b87a;
+  --color-text: #1c2426;
+  --color-text-muted: #5a6568;
+  --color-white: #ffffff;
+  --color-accent-soft: #e8f2f4;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-cream-dark: var(--color-cream-dark);
+  --color-petrol: var(--color-petrol);
+  --color-petrol-light: var(--color-petrol-light);
+  --color-petrol-dark: var(--color-petrol-dark);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent-soft: var(--color-accent-soft);
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-petrol);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.8s ease-out 0.15s forwards;
+  opacity: 0;
+}
+
+.gradient-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-petrol-dark) 0%,
+    var(--color-petrol) 45%,
+    var(--color-petrol-light) 100%
+  );
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.section-gradient {
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-white) 50%, var(--color-cream) 100%);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(26, 74, 82, 0.15);
+}

@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "siteName": "Dr. Ümit Alici – KBB Wien Favoriten",
+    "defaultDescription": "Wien 1100'de Kulak Burun Boğaz uzmanı. Çocuk KBB, alerji, acil randevular. Türkçe ve Almanca hizmet.",
+    "keywords": "KBB Wien 1100, Çocuk KBB Wien, Türk KBB Doktoru Wien, KBB Favoriten"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "ordination": "Muayenehane",
+    "team": "Ekip",
+    "about": "Doktor Hakkında",
+    "cv": "Özgeçmiş",
+    "qualifications": "Nitelikler",
+    "philosophy": "Felsefe",
+    "services": "Hizmetler",
+    "patientInfo": "Hasta Bilgisi",
+    "reviews": "Değerlendirmeler",
+    "contact": "İletişim",
+    "appointment": "Randevu",
+    "acute": "Acil Randevular",
+    "servicesMenu": {
+      "overview": "Genel bakış",
+      "acute": "Acil randevu iste",
+      "allServices": "Tüm hizmetler"
+    }
+  },
+  "insurance": {
+    "title": "Tüm sigortalar ve özel"
+  },
+  "doctors": {
+    "title": "Kulak Burun Boğaz Uzmanları"
+  },
+  "sticky": {
+    "acute": "Acil şikayetler mi? Kısa sürede randevu mümkün",
+    "phone": "+43 1 6025400"
+  },
+  "home": {
+    "faq": {
+      "eyebrow": "Hasta bilgisi",
+      "subtitle": "Ziyaretinizden önce en önemli soruların cevapları",
+      "moreLink": "Daha fazla hasta bilgisi"
+    }
+  },
+  "hero": {
+    "eyebrow": "Wien Favoriten'de KBB",
+    "title": "Dr. Ümit Alici",
+    "subtitle": "Kulak Burun Boğaz Uzmanı",
+    "tagline": "Wien Favoriten'de modern KBB tıbbı",
+    "ctaAppointment": "Randevu al",
+    "ctaAcute": "Acil randevu",
+    "ctaAbout": "Doktoru tanıyın"
+  },
+  "acute": {
+    "title": "Ani kulak ağrısı mı?",
+    "subtitle": "KBB şikayetleri mi? Kısa sürede randevu mümkün.",
+    "text": "Birçok KBB şikayeti beklememelidir. Wien Favoriten'deki muayenehanemizde acil durumlarda hızlı randevu vermeye çalışıyoruz.",
+    "cta": "Hemen arayın"
+  },
+  "trust": {
+    "title": "Hastalar neden Dr. Alici'yi seçiyor",
+    "items": {
+      "experience": {
+        "title": "Deneyimli KBB uzmanı",
+        "text": "Yetişkinler ve çocuklar için kapsamlı teşhis ve tedavi – kişisel ve güvenilir."
+      },
+      "children": {
+        "title": "Çocuk KBB uzmanı",
+        "text": "Güven veren bir ortamda nazik, yaşa uygun muayeneler."
+      },
+      "turkish": {
+        "title": "Türkçe hizmet",
+        "text": "Almanca ve Türkçe danışmanlık ve tedavi – güvenli doktor-hasta iletişimi için."
+      },
+      "insurance": {
+        "title": "Tüm sigortalar & özel",
+        "text": "Sigorta anlaşmalı muayenehane – sağlık hizmetine engel yok."
+      }
+    }
+  },
+  "about": {
+    "title": "Wien'de KBB için güvenilir adresiniz",
+    "intro": "Dr. Ümit Alici, Kulak Burun Boğaz uzmanıdır ve Wien Favoriten'deki muayenehanemizin güvenilir danışmanıdır. Hastalar onun sakin tavrını, çocuk KBB deneyimini ve Almanca ile Türkçe danışmanlık imkânını takdir ediyor.",
+    "philosophy": "Benim için önemli olan sadece teşhis değil, insanın kendisidir. Şikayetleriniz için zaman ayırır, anlaşılır şekilde açıklar ve ilk muayeneden tedaviye kadar yanınızda olurum.",
+    "whyHno": "KBB, hassas teşhis ile günlük yaşamda hissedilir iyileşmeleri birleştirir – işitme, nefes alma, yutma veya baş dönmesi. Bu bağ beni bu branşa bağlıyor.",
+    "expectations": "Bekleyebilecekleriniz: kapsamlı anamnez, modern teşhis, net öneriler ve kendinizi ciddiye alındığınız hissettiğiniz bir muayenehane – yetişkin veya çocuk fark etmez."
+  },
+  "services": {
+    "title": "Hizmetler",
+    "subtitle": "Tüm aile için kapsamlı KBB bakımı",
+    "general": {
+      "title": "Genel KBB",
+      "text": "Burun, kulak ve boğaz hastalıklarının teşhisi ve tedavisi – enfeksiyonlardan kronik şikayetlere kadar."
+    },
+    "children": {
+      "title": "Çocuk KBB",
+      "text": "Çocuklar için özel bakım: kulak ağrısı, polip, işitme sorunları ve tekrarlayan enfeksiyonlar – nazik ve yaşa uygun."
+    },
+    "allergy": {
+      "title": "Alerji",
+      "text": "Üst solunum yolu alerjik şikayetlerinin araştırılması ve tedavisi – günlük yaşam kalitesi için."
+    },
+    "hearing": {
+      "title": "İşitme testi",
+      "text": "İşitme testleri ve işitme kaybı, tinnitus ve diğer işitme bozukluklarının araştırılması."
+    },
+    "vertigo": {
+      "title": "Baş dönmesi",
+      "text": "Baş dönmesi ve denge bozukluklarının hedefli KBB araştırması."
+    },
+    "snoring": {
+      "title": "Horlama",
+      "text": "Horlama ve uykuyla ilgili solunum sorunlarının araştırılması ve tedavisi."
+    },
+    "voice": {
+      "title": "Ses bozuklukları",
+      "text": "Ses kısıklığı ve fonksiyonel ses sorunlarının muayenesi ve tedavisi."
+    }
+  },
+  "patientInfo": {
+    "title": "Hasta Bilgisi",
+    "insurance": {
+      "title": "Tüm sigortalar",
+      "text": "Muayenehanemiz tüm yasal sağlık sigortaları için anlaşmalıdır. Özel hastaları da tedavi ediyoruz."
+    },
+    "faq": {
+      "title": "Sık sorulan sorular",
+      "items": [
+        {
+          "q": "Sevk gerekli mi?",
+          "a": "Sigortalı hastalar için genellikle aile veya çocuk doktorundan sevk gerekir. Acil şikayetlerde bizi telefonla arayın."
+        },
+        {
+          "q": "Acil randevu var mı?",
+          "a": "Evet. Acil KBB şikayetlerinde kısa sürede randevu vermeye çalışıyoruz. En iyisi doğrudan aramaktır."
+        },
+        {
+          "q": "Çocuklar tedavi ediliyor mu?",
+          "a": "Evet. Çocuk KBB muayenehanemizin odak noktasıdır. En küçük hastalarımız için özellikle zaman ayırıyoruz."
+        },
+        {
+          "q": "Türkçe konuşuluyor mu?",
+          "a": "Evet. Dr. Ümit Alici Almanca ve Türkçe danışmanlık ve tedavi sunar."
+        }
+      ]
+    },
+    "acute": {
+      "title": "Acil randevular",
+      "text": "Ani kulak ağrısı, işitme kaybı, baş dönmesi veya şiddetli KBB şikayetlerinde lütfen bizi arayın. Kısa sürede randevu vermeye çalışıyoruz."
+    },
+    "downloads": {
+      "title": "İndirmeler",
+      "text": "Formlar ve bilgi broşürleri talep üzerine veya muayenehanede ziyaretinizde sunulur."
+    }
+  },
+  "hours": {
+    "title": "Muayene saatleri",
+    "monday": "Pazartesi",
+    "tuesday": "Salı",
+    "wednesday": "Çarşamba",
+    "thursday": "Perşembe",
+    "friday": "Cuma",
+    "mondayHours": "09:00–13:00 & 14:00–19:00",
+    "tuesdayHours": "09:00–14:00",
+    "wednesdayHours": "09:00–12:00 & 13:00–17:00",
+    "thursdayHours": "09:00–14:00",
+    "fridayHours": "09:00–14:00"
+  },
+  "contact": {
+    "title": "İletişim & Ulaşım",
+    "address": "Senefeldergasse 3/1, 1100 Wien",
+    "phone": "+43 1 6025400",
+    "email": "ordination@hno-alici.at",
+    "maps": "Yol tarifi"
+  },
+  "appointment": {
+    "title": "Online Randevu",
+    "subtitle": "Wien Favoriten KBB muayenehanesinde randevunuzu ayarlayın",
+    "text": "Randevu için bizi arayın veya e-posta gönderin. Acil şikayetlerde telefonla iletişimi öneririz.",
+    "ctaPhone": "Hemen arayın",
+    "ctaEmail": "E-posta yazın"
+  },
+  "reviews": {
+    "title": "Değerlendirmeler",
+    "subtitle": "Google, DocFinder ve Herold'daki hasta yorumları",
+    "writeReview": "Google'da değerlendir",
+    "viewOnGoogle": "Google Maps'i aç",
+    "platforms": "Değerlendirme platformları",
+    "patientStories": "Hasta deneyimleri",
+    "cta": "Görüşünüz önemli – deneyiminizi Google'da paylaşın"
+  },
+  "team": {
+    "title": "Ekibimiz",
+    "subtitle": "Dr. Ümit Alici deneyimli bir ekip tarafından desteklenir",
+    "note": "Güvenilir danışman Dr. Ümit Alici'dir – ekibimiz muayenehanede sorunsuz bir süreç sağlar."
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır.",
+    "imprint": "Künye",
+    "privacy": "Gizlilik",
+    "cookies": "Çerez politikası",
+    "disclaimer": "Sorumluluk reddi",
+    "cookieSettings": "Çerez ayarları",
+    "emergency": "Hayati tehlike? Acil servisi arayın:",
+    "tagline": "Wien Favoriten'de yetişkin ve çocuklar için KBB muayenehanesi"
+  },
+  "cv": {
+    "title": "Özgeçmiş",
+    "items": [
+      "Kulak Burun Boğaz uzmanı",
+      "Genel KBB ve Çocuk KBB odak alanı",
+      "Wien 1100 Favoriten'de muayenehane",
+      "Almanca ve Türkçe hasta bakımı"
+    ]
+  },
+  "qualifications": {
+    "title": "Nitelikler",
+    "items": [
+      "KBB uzmanlığı",
+      "Alerji teşhisi ve tedavisi",
+      "Çocuk KBB ve işitme bozuklukları",
+      "Baş dönmesi ve denge bozuklukları teşhisi"
+    ]
+  },
+  "philosophy": {
+    "title": "Felsefe",
+    "text": "Tıp benim için dinlemek, anlamak ve birlikte doğru yolu bulmak demektir. Yetişkin veya çocuk – her hasta zaman, netlik ve hayatına uygun tedavi hak eder."
+  }
+}

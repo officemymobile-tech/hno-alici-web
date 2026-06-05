@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "siteName": "Dr. Ümit Alici – HNO Wien Favoriten",
+    "defaultDescription": "Facharzt für Hals-, Nasen- und Ohrenheilkunde in Wien 1100. Kinder-HNO, Allergologie, Akuttermine. Türkisch- und deutschsprachige Betreuung.",
+    "keywords": "HNO Wien 1100, Kinder HNO Wien, Türkischer HNO Arzt Wien, HNO Favoriten, Ohrenschmerzen Wien"
+  },
+  "nav": {
+    "home": "Startseite",
+    "ordination": "Ordination",
+    "team": "Team",
+    "about": "Dr. Ümit Alici",
+    "cv": "Lebenslauf",
+    "qualifications": "Qualifikationen",
+    "philosophy": "Philosophie",
+    "services": "Leistungen",
+    "patientInfo": "Patienteninfo",
+    "reviews": "Bewertungen",
+    "contact": "Kontakt",
+    "appointment": "Termin",
+    "acute": "Akuttermine",
+    "servicesMenu": {
+      "overview": "Übersicht",
+      "acute": "Akuttermine anfragen",
+      "allServices": "Alle Leistungen"
+    }
+  },
+  "insurance": {
+    "title": "Alle Kassen und privat"
+  },
+  "doctors": {
+    "title": "Fachärzte für Hals-, Nasen- u. Ohrenheilkunde"
+  },
+  "sticky": {
+    "acute": "Akute Beschwerden? Kurzfristige Termine möglich",
+    "phone": "+43 1 6025400"
+  },
+  "home": {
+    "faq": {
+      "eyebrow": "Patienteninfo",
+      "subtitle": "Antworten auf die wichtigsten Fragen vor Ihrem Besuch",
+      "moreLink": "Mehr Patienteninfo"
+    }
+  },
+  "hero": {
+    "eyebrow": "HNO in Wien Favoriten",
+    "title": "Dr. Ümit Alici",
+    "subtitle": "Facharzt für Hals-, Nasen- und Ohrenheilkunde",
+    "tagline": "Moderne HNO-Medizin in Wien Favoriten",
+    "ctaAppointment": "Termin buchen",
+    "ctaAcute": "Akuttermin anfragen",
+    "ctaAbout": "Arzt kennenlernen"
+  },
+  "acute": {
+    "title": "Akute Ohrenschmerzen?",
+    "subtitle": "HNO-Beschwerden? Kurzfristige Termine möglich.",
+    "text": "Viele HNO-Beschwerden sollten nicht warten. In unserer Ordination in Wien Favoriten bemühen wir uns um zeitnahe Termine bei akuten Beschwerden.",
+    "cta": "Jetzt anrufen"
+  },
+  "trust": {
+    "title": "Warum Patienten Dr. Alici wählen",
+    "items": {
+      "experience": {
+        "title": "Erfahrener HNO-Facharzt",
+        "text": "Umfassende Diagnostik und Behandlung für Erwachsene und Kinder – persönlich und verlässlich."
+      },
+      "children": {
+        "title": "Spezialist für Kinder-HNO",
+        "text": "Sanfte, kindgerechte Untersuchungen in einer vertrauensvollen Atmosphäre."
+      },
+      "turkish": {
+        "title": "Türkischsprachige Betreuung",
+        "text": "Beratung und Behandlung auf Deutsch und Türkisch – für ein sicheres Arzt-Patienten-Gespräch."
+      },
+      "insurance": {
+        "title": "Alle Kassen & privat",
+        "text": "Ordination mit Kassenzulassung – keine Barrieren bei der medizinischen Versorgung."
+      }
+    }
+  },
+  "about": {
+    "title": "Ihr Ansprechpartner für HNO in Wien",
+    "intro": "Dr. Ümit Alici ist Facharzt für Hals-, Nasen- und Ohrenheilkunde und der vertrauensvolle Ansprechpartner unserer Ordination in Wien Favoriten. Patienten schätzen seine ruhige Art, seine Erfahrung in der Kinder-HNO und die Möglichkeit, auf Deutsch und Türkisch beraten zu werden.",
+    "philosophy": "Für mich steht der Mensch im Mittelpunkt – nicht nur die Diagnose. Ich nehme mir Zeit für Ihre Beschwerden, erkläre verständlich und begleite Sie von der ersten Untersuchung bis zur Therapie.",
+    "whyHno": "Die HNO-Heilkunde verbindet präzise Diagnostik mit spürbaren Verbesserungen im Alltag – ob beim Hören, Atmen, Schlucken oder bei Schwindel. Genau diese Verbindung macht dieses Fach für mich so bedeutsam.",
+    "expectations": "Was Sie erwarten dürfen: eine gründliche Anamnese, moderne Diagnostik, klare Empfehlungen und eine Ordination, in der Sie sich ernst genommen fühlen – als Erwachsener wie als Kind."
+  },
+  "services": {
+    "title": "Leistungen",
+    "subtitle": "Umfassende HNO-Versorgung für die ganze Familie",
+    "general": {
+      "title": "Allgemeine HNO",
+      "text": "Diagnostik und Behandlung von Erkrankungen der Nase, der Ohren und des Halses – von Infekten bis zu chronischen Beschwerden."
+    },
+    "children": {
+      "title": "Kinder-HNO",
+      "text": "Spezialisierte Versorgung für Kinder: Ohrenschmerzen, Polypen, Hörprobleme und wiederkehrende Infekte – einfühlsam und altersgerecht."
+    },
+    "allergy": {
+      "title": "Allergologie",
+      "text": "Abklärung und Behandlung allergischer Beschwerden der oberen Atemwege – für mehr Lebensqualität im Alltag."
+    },
+    "hearing": {
+      "title": "Hörtest",
+      "text": "Hörprüfungen und Abklärung von Hörverlust, Tinnitus und anderen Hörstörungen."
+    },
+    "vertigo": {
+      "title": "Schwindel",
+      "text": "Diagnostik von Schwindel und Gleichgewichtsstörungen mit gezielter HNO-Abklärung."
+    },
+    "snoring": {
+      "title": "Schnarchen",
+      "text": "Abklärung und Behandlung von Schnarchen und schlafbezogenen Atemproblemen."
+    },
+    "voice": {
+      "title": "Stimmstörungen",
+      "text": "Untersuchung und Therapie von Heiserkeit und funktionellen Stimmproblemen."
+    }
+  },
+  "patientInfo": {
+    "title": "Patienteninfo",
+    "insurance": {
+      "title": "Alle Kassen",
+      "text": "Unsere Ordination ist für alle gesetzlichen Krankenkassen zugelassen. Selbstverständlich behandeln wir auch Privatpatienten."
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Brauche ich eine Überweisung?",
+          "a": "Für Kassenpatienten ist in der Regel eine Überweisung vom Haus- oder Kinderarzt erforderlich. Bei akuten Beschwerden kontaktieren Sie uns gerne telefonisch."
+        },
+        {
+          "q": "Gibt es Akuttermine?",
+          "a": "Ja. Bei akuten HNO-Beschwerden versuchen wir, zeitnahe Termine anzubieten. Rufen Sie uns am besten direkt an."
+        },
+        {
+          "q": "Werden Kinder behandelt?",
+          "a": "Ja. Kinder-HNO ist ein Schwerpunkt unserer Ordination. Wir nehmen uns besonders viel Zeit für unsere jüngsten Patienten."
+        },
+        {
+          "q": "Wird Türkisch gesprochen?",
+          "a": "Ja. Dr. Ümit Alici berät und behandelt auf Deutsch und Türkisch."
+        }
+      ]
+    },
+    "acute": {
+      "title": "Akuttermine",
+      "text": "Bei plötzlichen Ohrenschmerzen, Hörverlust, Schwindel oder starken HNO-Beschwerden rufen Sie uns bitte an. Wir bemühen uns um kurzfristige Termine."
+    },
+    "downloads": {
+      "title": "Downloads",
+      "text": "Formulare und Informationsblätter stellen wir auf Anfrage oder bei Ihrem Besuch in der Ordination bereit."
+    }
+  },
+  "hours": {
+    "title": "Ordinationszeiten",
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "mondayHours": "09:00–13:00 & 14:00–19:00",
+    "tuesdayHours": "09:00–14:00",
+    "wednesdayHours": "09:00–12:00 & 13:00–17:00",
+    "thursdayHours": "09:00–14:00",
+    "fridayHours": "09:00–14:00"
+  },
+  "contact": {
+    "title": "Kontakt & Anfahrt",
+    "address": "Senefeldergasse 3/1, 1100 Wien",
+    "phone": "+43 1 6025400",
+    "email": "ordination@hno-alici.at",
+    "maps": "Route planen"
+  },
+  "appointment": {
+    "title": "Online Termin",
+    "subtitle": "Vereinbaren Sie Ihren Besuch in der HNO-Ordination Wien Favoriten",
+    "text": "Für eine Terminvereinbarung rufen Sie uns an oder schreiben Sie uns eine E-Mail. Bei akuten Beschwerden empfehlen wir einen telefonischen Kontakt.",
+    "ctaPhone": "Jetzt anrufen",
+    "ctaEmail": "E-Mail schreiben"
+  },
+  "reviews": {
+    "title": "Bewertungen",
+    "subtitle": "Das sagen unsere Patienten auf Google, DocFinder und Herold",
+    "writeReview": "Auf Google bewerten",
+    "viewOnGoogle": "Google Maps öffnen",
+    "platforms": "Bewertungsportale",
+    "patientStories": "Erfahrungsberichte",
+    "cta": "Ihre Meinung zählt – teilen Sie Ihre Erfahrung auf Google"
+  },
+  "team": {
+    "title": "Unser Team",
+    "subtitle": "Dr. Ümit Alici wird von einem erfahrenen Team unterstützt",
+    "note": "Der vertrauensvolle Ansprechpartner bleibt Dr. Ümit Alici – unser Team sorgt für einen reibungslosen Ablauf in der Ordination."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookie-Richtlinie",
+    "disclaimer": "Haftungsausschluss",
+    "cookieSettings": "Cookie-Einstellungen",
+    "emergency": "Lebensbedrohlicher Notfall? Rufen Sie den Rettungsdienst an:",
+    "tagline": "HNO-Ordination für Erwachsene und Kinder in Wien Favoriten"
+  },
+  "cv": {
+    "title": "Lebenslauf",
+    "items": [
+      "Facharzt für Hals-, Nasen- und Ohrenheilkunde",
+      "Schwerpunkt Allgemeine HNO und Kinder-HNO",
+      "Ordination in Wien 1100 – Favoriten",
+      "Tätigkeit in deutsch- und türkischsprachiger Patientenbetreuung"
+    ]
+  },
+  "qualifications": {
+    "title": "Qualifikationen",
+    "items": [
+      "Facharzt für HNO-Heilkunde",
+      "Allergologische Diagnostik und Therapie",
+      "Kinder-HNO und Hörstörungen",
+      "Diagnostik von Schwindel und Gleichgewichtsstörungen"
+    ]
+  },
+  "philosophy": {
+    "title": "Philosophie",
+    "text": "Medizin bedeutet für mich Zuhören, Verstehen und gemeinsam den richtigen Weg finden. Ob Erwachsener oder Kind – jeder Patient verdient Zeit, Klarheit und eine Behandlung, die zu seinem Leben passt."
+  }
+}
