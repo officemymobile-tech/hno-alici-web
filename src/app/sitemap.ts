@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (path === "/cocuk-kbb-wien-1100" && locale === "de") continue;
 
       entries.push({
-        url: `${baseUrl}/${locale}${path}`,
+        url: `${baseUrl}/${locale}${path}/`,
         lastModified: new Date(),
         changeFrequency: path === "" || path === "/blog" ? "weekly" : "monthly",
         priority: path === "" ? 1 : path.includes("hno") || path.includes("kbb") ? 0.9 : 0.8,
@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const slug of serviceSlugs) {
       entries.push({
-        url: `${baseUrl}/${locale}/leistungen/${slug}`,
+        url: `${baseUrl}/${locale}/leistungen/${slug}/`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.85,
@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     for (const post of blogPosts) {
       entries.push({
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        url: `${baseUrl}/${locale}/blog/${post.slug}/`,
         lastModified: new Date(post.date),
         changeFrequency: "monthly",
         priority: 0.7,
