@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+
+export const dynamic = "force-static";
 import { blogPosts } from "@/content/seo-landings";
 import { serviceSlugs } from "@/lib/site";
 

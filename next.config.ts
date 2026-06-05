@@ -5,17 +5,15 @@ import path from "path";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
   turbopack: {
     root: path.join(__dirname),
   },
   images: {
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256],
-    minimumCacheTTL: 31536000,
+    unoptimized: true,
   },
   poweredByHeader: false,
-  compress: true,
 };
 
 export default withNextIntl(nextConfig);
