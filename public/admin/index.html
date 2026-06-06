@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Mitteilungen – HNO Alici Admin</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <script src="/admin/config.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow">HNO Alici · hno-alici.at</p>
+        <h1>Aktuelle Mitteilungen</h1>
+        <p class="lead">
+          Tagesaktuelle Hinweise für Patienten (Deutsch &amp; Türkisch). Kein GitHub-Login
+          nötig — nur das Ordinations-Passwort.
+        </p>
+      </header>
+
+      <div id="setup-hint" class="card card-warn hidden" role="alert"></div>
+      <div id="status" class="status hidden" role="status" aria-live="polite"></div>
+
+      <form id="form" class="card">
+        <fieldset>
+          <legend>Anzeige</legend>
+          <label class="check">
+            <input type="checkbox" id="active" name="active" />
+            <span>Mitteilung auf der Website anzeigen</span>
+          </label>
+          <label class="field">
+            <span>Art der Meldung</span>
+            <select id="variant" name="variant">
+              <option value="info">Information (blau/grün)</option>
+              <option value="warning">Hinweis (gold)</option>
+              <option value="urgent">Dringend (dunkel)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Gültig bis (optional)</span>
+            <input type="date" id="validUntil" name="validUntil" />
+            <small>Leer lassen = ohne Ablaufdatum</small>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Deutsch</legend>
+          <label class="field">
+            <span>Titel (optional)</span>
+            <input type="text" id="titleDe" maxlength="120" placeholder="z. B. Geänderte Sprechzeiten heute" />
+          </label>
+          <label class="field">
+            <span>Text</span>
+            <textarea id="textDe" rows="3" maxlength="500" placeholder="Kurzer Hinweis für Patienten …"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Türkçe</legend>
+          <label class="field">
+            <span>Başlık (isteğe bağlı)</span>
+            <input type="text" id="titleTr" maxlength="120" placeholder="Örn. Bugün değişen çalışma saatleri" />
+          </label>
+          <label class="field">
+            <span>Metin</span>
+            <textarea id="textTr" rows="3" maxlength="500" placeholder="Hastalar için kısa duyuru …"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Link (optional)</legend>
+          <label class="field">
+            <span>URL</span>
+            <input type="url" id="linkUrl" placeholder="https://hno-alici.at/de/termin/" />
+          </label>
+          <label class="field">
+            <span>Link-Text Deutsch</span>
+            <input type="text" id="linkLabelDe" maxlength="80" placeholder="Termin anfragen" />
+          </label>
+          <label class="field">
+            <span>Link-Text Türkçe</span>
+            <input type="text" id="linkLabelTr" maxlength="80" placeholder="Randevu al" />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Speichern</legend>
+          <label class="field">
+            <span>Ordinations-Passwort</span>
+            <input
+              type="password"
+              id="password"
+              autocomplete="current-password"
+              required
+              placeholder="Nur für das Ordinationsteam"
+            />
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="button" class="btn btn-ghost" id="hideBtn">Ausblenden (deaktivieren)</button>
+          <button type="submit" class="btn btn-primary" id="saveBtn">Veröffentlichen</button>
+        </div>
+      </form>
+
+      <footer class="foot">
+        <p>
+          Nach dem Speichern dauert die Aktualisierung der Website ca. 2–3 Minuten.
+          Bei Problemen: Techniker kontaktieren.
+        </p>
+      </footer>
+    </div>
+    <script src="/admin/admin.js"></script>
+  </body>
+</html>

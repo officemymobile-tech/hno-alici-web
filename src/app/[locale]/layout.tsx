@@ -9,6 +9,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingCTA } from "@/components/layout/FloatingCTA";
 import { CookieConsent } from "@/components/consent/CookieConsent";
+import { AnnouncementBanner } from "@/components/shared/AnnouncementBanner";
 import { siteConfig } from "@/lib/site";
 import { medicalClinicSchema, physicianSchema } from "@/lib/schema";
 import "../globals.css";
@@ -99,6 +100,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="min-h-full flex flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           <StickyBar />
+          <AnnouncementBanner />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

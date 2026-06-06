@@ -1,0 +1,15 @@
+name = "hno-alici-announcements"
+main = "announcement-api.js"
+compatibility_date = "2024-01-01"
+
+# Geheimnisse per Dashboard oder CLI setzen (nicht ins Repo committen):
+# wrangler secret put ADMIN_PASSWORD
+# wrangler secret put GITHUB_PAT
+# wrangler secret put GITHUB_OWNER
+# wrangler secret put GITHUB_REPO
+# wrangler secret put GITHUB_FILE_PATH
+
+[vars]
+GITHUB_OWNER = "officemymobile-tech"
+GITHUB_REPO = "hno-alici-web"
+GITHUB_FILE_PATH = "src/content/announcements.json"
