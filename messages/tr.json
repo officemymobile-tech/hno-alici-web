@@ -22,6 +22,13 @@
       "overview": "Genel bakış",
       "acute": "Acil randevu iste",
       "allServices": "Tüm hizmetler"
+    },
+    "aktuelles": "Güncel",
+    "aktuellesMenu": {
+      "label": "Güncel",
+      "eyebrow": "Duyuru",
+      "emptyTitle": "Güncel duyuru yok",
+      "emptyText": "Muayenehane haber ve bilgilendirmeleri burada görünür."
     }
   },
   "insurance": {

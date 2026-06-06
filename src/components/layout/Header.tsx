@@ -8,8 +8,11 @@ import { useLocale, useTranslations } from "next-intl";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ServiceIcon, serviceSlugToIcon } from "@/components/icons/ServiceIcon";
+import { AktuellesMobilePanel, AktuellesNavMenu } from "@/components/layout/AktuellesNavMenu";
 import { ServicesMegaMenu } from "@/components/layout/ServicesMegaMenu";
 import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
+import type { AnnouncementData } from "@/lib/announcements";
+import type { Locale } from "@/i18n/routing";
 import { megaMenuCategories } from "@/content/mega-menu";
 import { images } from "@/content/site-content";
 import { serviceSlugToKey } from "@/lib/site";
@@ -23,7 +26,11 @@ const navItems = [
   { key: "about", href: "/dr-uemit-alici" },
 ] as const;
 
-export function Header() {
+type HeaderProps = {
+  announcement?: AnnouncementData | null;
+};
+
+export function Header({ announcement = null }: HeaderProps) {
   const t = useTranslations("nav");
   const tServices = useTranslations("services");
   const locale = useLocale();
@@ -75,7 +82,20 @@ export function Header() {
             </Link>
           ))}
           <ServicesMegaMenu locale={locale} isActive={servicesActive} />
-          {navItems.slice(1).map((item) => (
+          {navItems.slice(1, 3).map((item) => (
+            <Link
+              key={item.key}
+              href={`/${locale}${item.href}`}
+              className={cn(
+                "text-sm font-medium transition hover:text-petrol",
+                isActive(item.href) ? "text-petrol" : "text-text-muted",
+              )}
+            >
+              {t(item.key)}
+            </Link>
+          ))}
+          <AktuellesNavMenu locale={locale as Locale} announcement={announcement} />
+          {navItems.slice(3).map((item) => (
             <Link
               key={item.key}
               href={`/${locale}${item.href}`}
@@ -188,7 +208,28 @@ export function Header() {
                 </ul>
               )}
             </li>
-            {navItems.slice(1).map((item) => (
+            {navItems.slice(1, 3).map((item) => (
+              <li key={item.key}>
+                <Link
+                  href={`/${locale}${item.href}`}
+                  className="block py-2.5 text-base font-medium text-text"
+                  onClick={() => setOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <p className="py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                {t("aktuelles")}
+              </p>
+              <AktuellesMobilePanel
+                locale={locale as Locale}
+                announcement={announcement}
+                onNavigate={() => setOpen(false)}
+              />
+            </li>
+            {navItems.slice(3).map((item) => (
               <li key={item.key}>
                 <Link
                   href={`/${locale}${item.href}`}
