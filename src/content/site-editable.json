@@ -1,0 +1,105 @@
+{
+  "updatedAt": "2026-06-06",
+  "texts": {
+    "hero": {
+      "eyebrow": {
+        "de": "HNO in Wien Favoriten",
+        "tr": "Wien Favoriten'de KBB"
+      },
+      "title": {
+        "de": "Dr. Ümit Alici",
+        "tr": "Dr. Ümit Alici"
+      },
+      "subtitle": {
+        "de": "Facharzt für Hals-, Nasen- und Ohrenheilkunde",
+        "tr": "Kulak Burun Boğaz Uzmanı"
+      },
+      "tagline": {
+        "de": "Ihr türkisch- und deutschsprachiger HNO-Facharzt in Wien Favoriten",
+        "tr": "Wien Favoriten'de Türkçe ve Almanca KBB uzmanınız"
+      }
+    },
+    "about": {
+      "title": {
+        "de": "Ihr Ansprechpartner für HNO in Wien",
+        "tr": "Wien'de KBB için güvenilir adresiniz"
+      },
+      "intro": {
+        "de": "Dr. Ümit Alici ist Facharzt für Hals-, Nasen- und Ohrenheilkunde und der vertrauensvolle Ansprechpartner unserer Ordination in Wien Favoriten. Patienten schätzen seine ruhige Art, seine Erfahrung in der Kinder-HNO und die Möglichkeit, auf Deutsch und Türkisch beraten zu werden.",
+        "tr": "Dr. Ümit Alici, Kulak Burun Boğaz uzmanıdır ve Wien Favoriten muayenehanemizin güvenilir hekimidir. Hastalar sakin yaklaşımını, çocuk KBB deneyimini ve Almanca ile Türkçe danışmanlığı takdir eder."
+      },
+      "philosophy": {
+        "de": "Für mich steht der Mensch im Mittelpunkt – nicht nur die Diagnose. Ich nehme mir Zeit für Ihre Beschwerden, erkläre verständlich und begleite Sie von der ersten Untersuchung bis zur Therapie.",
+        "tr": "Benim için önemli olan yalnızca teşhis değil, insandır. Şikayetleriniz için zaman ayırır, anlaşılır şekilde açıklar ve ilk muayeneden tedaviye kadar yanınızda olurum."
+      }
+    },
+    "hours": {
+      "mondayHours": {
+        "de": "09:00–13:00 & 14:00–19:00",
+        "tr": "09:00–13:00 & 14:00–19:00"
+      },
+      "tuesdayHours": {
+        "de": "09:00–14:00",
+        "tr": "09:00–14:00"
+      },
+      "wednesdayHours": {
+        "de": "09:00–12:00 & 13:00–17:00",
+        "tr": "09:00–12:00 & 13:00–17:00"
+      },
+      "thursdayHours": {
+        "de": "09:00–14:00",
+        "tr": "09:00–14:00"
+      },
+      "fridayHours": {
+        "de": "09:00–14:00",
+        "tr": "09:00–14:00"
+      }
+    }
+  },
+  "images": {
+    "ordinationHero": "/images/pro/ordination-hero-pro.jpg",
+    "drAliciPortrait": "/images/pro/dr-alici-portrait-pro.jpg",
+    "teamFrAlici": "/images/pro/team-fr-alici-pro.jpg",
+    "leistungenOverview": "/images/pro/leistungen-overview-pro.jpg"
+  },
+  "team": {
+    "staff": [
+      {
+        "name": "Frau Ruzica Tadic",
+        "role": { "de": "Ordinationsmanagerin", "tr": "Muayenehane Müdürü" }
+      },
+      {
+        "name": "Frau Hatice Yildizdal",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Yaren Sertelli",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Melissa Baran",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Naila Memic",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Aya Halabia",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Melike Arslan",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Herr David Kanji Zach-Kiesling",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      },
+      {
+        "name": "Frau Marielle Bahome",
+        "role": { "de": "Ordinationsteam", "tr": "Ordinationsteam" }
+      }
+    ]
+  }
+}

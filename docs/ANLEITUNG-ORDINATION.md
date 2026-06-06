@@ -9,19 +9,51 @@ Sie brauchen **kein GitHub**, **keinen Techniker** und **keine Programmierkenntn
 
 ## Kurzüberblick
 
-| Was | Details |
-|-----|---------|
-| **Admin-Seite** | https://hno-alici.at/admin/ |
-| **Passwort** | `SDyf1F4azlxPgonOBX` |
-| **Wo Patienten es sehen** | Menü **„Aktuelles“** in der Navigationsleiste (oben auf jeder Seite) |
+| Bereich | URL | Was können Sie ändern? |
+|---------|-----|------------------------|
+| **Mitteilungen** | https://hno-alici.at/admin/ | Tagesaktuelle Hinweise → Menü „Aktuelles“ |
+| **Texte** | https://hno-alici.at/admin/inhalte.html | Startseite, Über uns, Zeiten, Team |
+| **Bilder** | https://hno-alici.at/admin/bilder.html | Hero-Foto, Porträt, Team-Foto, Leistungen |
+| **Anleitung** | https://hno-alici.at/admin/anleitung.html | Diese Hilfe zum Ausdrucken |
+
+| | |
+|---|---|
+| **Passwort (alle Bereiche)** | `SDyf1F4azlxPgonOBX` |
 | **Wartezeit nach Speichern** | ca. **2–3 Minuten** |
-| **Sprachen** | Deutsch **und** Türkisch (beide Felder ausfüllen) |
+| **Sprachen** | Deutsch **und** Türkisch |
 
 > **Wichtig:** Das Passwort nur intern im Ordinationsteam verwenden — nicht an Patienten weitergeben und nicht öffentlich aufschreiben.
 
 ---
 
-## Schritt 1 — Admin-Seite öffnen
+## Texte & Bilder selbst ändern
+
+### Texte bearbeiten
+
+1. Öffnen Sie **https://hno-alici.at/admin/inhalte.html**
+2. Bereiche anpassen: **Startseite**, **Über uns**, **Ordinationszeiten**, **Team**
+3. Passwort eingeben → **„Texte veröffentlichen“**
+4. Nach 2–3 Minuten auf der Website prüfen
+
+### Bilder austauschen
+
+1. Öffnen Sie **https://hno-alici.at/admin/bilder.html**
+2. Passwort einmal eingeben (gilt für alle Uploads)
+3. Pro Bild: **„Neues Bild wählen“** → **„Bild hochladen“**
+4. Erlaubt: JPG, PNG, WebP — max. **4 MB**
+
+**Austauschbare Fotos:**
+
+| Bild | Wo sichtbar? |
+|------|----------------|
+| Startseite Hintergrund | Hero-Bereich oben |
+| Porträt Dr. Alici | Startseite rechts |
+| Team-Foto | (Reserve für Team-Bereich) |
+| Leistungen Übersicht | Leistungsseiten |
+
+---
+
+## Schritt 1 — Mitteilungen (Admin-Seite öffnen)
 
 1. Öffnen Sie einen Browser (Chrome, Firefox, Safari, Edge — am PC, Tablet oder Handy).
 2. Geben Sie in die Adresszeile ein:

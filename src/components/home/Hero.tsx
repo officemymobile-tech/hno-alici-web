@@ -5,6 +5,7 @@ import { SiteImage } from "@/components/ui/SiteImage";
 import { StarRating } from "@/components/reviews/StarRating";
 import { images } from "@/content/site-content";
 import { doctorProfile } from "@/content/doctor-profile";
+import { getEditableImage, getEditableText } from "@/lib/editable-content";
 import { reviewPlatforms } from "@/content/reviews";
 import { siteConfig } from "@/lib/site";
 
@@ -13,12 +14,14 @@ export async function Hero() {
   const tAcute = await getTranslations("acute");
   const locale = await getLocale();
   const lang = locale as "de" | "tr";
+  const heroImage = getEditableImage("ordinationHero", images.ordinationHero);
+  const portrait = getEditableImage("drAliciPortrait", doctorProfile.portrait);
 
   return (
     <section className="relative min-h-[90vh] overflow-hidden bg-petrol-dark">
       <div className="absolute inset-0">
         <SiteImage
-          src={images.ordinationHero}
+          src={heroImage}
           alt="HNO Ordination Wien"
           fill
           priority
@@ -33,12 +36,18 @@ export async function Hero() {
           <p className="mb-2 inline-block rounded-full bg-gold/20 px-4 py-1 text-sm font-semibold text-gold">
             {tAcute("subtitle")}
           </p>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold">{t("eyebrow")}</p>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+            {getEditableText("hero", "eyebrow", lang, t("eyebrow"))}
+          </p>
           <h1 className="font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl">
-            {t("title")}
+            {getEditableText("hero", "title", lang, t("title"))}
           </h1>
-          <p className="mt-4 text-xl text-white/90">{t("subtitle")}</p>
-          <p className="mt-2 text-lg text-white/70">{doctorProfile.tagline[lang]}</p>
+          <p className="mt-4 text-xl text-white/90">
+            {getEditableText("hero", "subtitle", lang, t("subtitle"))}
+          </p>
+          <p className="mt-2 text-lg text-white/70">
+            {getEditableText("hero", "tagline", lang, doctorProfile.tagline[lang])}
+          </p>
 
           <Link
             href={reviewPlatforms.google.url}
@@ -79,7 +88,7 @@ export async function Hero() {
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl ring-4 ring-gold/30">
             <SiteImage
-              src={doctorProfile.portrait}
+              src={portrait}
               alt="Dr. Ümit Alici – HNO Facharzt Wien"
               fill
               priority

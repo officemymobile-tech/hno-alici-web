@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Bilder austauschen – HNO Alici Admin</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <script src="/admin/config.js"></script>
+    <script src="/admin/admin-nav.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow">HNO Alici · Website-Inhalte</p>
+        <h1>Bilder austauschen</h1>
+        <p class="lead">
+          Wichtige Fotos der Website hochladen (JPG, PNG oder WebP, max. 4 MB).
+          Nach dem Upload aktualisiert sich die Website in ca. 2–3 Minuten.
+        </p>
+      </header>
+
+      <div id="status" class="status hidden" role="status" aria-live="polite"></div>
+
+      <div class="card" id="imageCards"></div>
+
+      <form id="pwForm" class="card">
+        <fieldset>
+          <legend>Für alle Uploads</legend>
+          <label class="field">
+            <span>Ordinations-Passwort</span>
+            <input type="password" id="password" autocomplete="current-password" required />
+          </label>
+        </fieldset>
+      </form>
+
+      <footer class="foot">
+        <p>Tipp: Fotos vorher zuschneiden und komprimieren — die Website lädt schneller.</p>
+      </footer>
+    </div>
+    <script src="/admin/bilder.js"></script>
+  </body>
+</html>

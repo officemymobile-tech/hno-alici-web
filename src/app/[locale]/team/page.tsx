@@ -4,11 +4,7 @@ import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { SiteImage } from "@/components/ui/SiteImage";
 import { doctors, images, teamStaff } from "@/content/site-content";
 import { doctorProfile } from "@/content/doctor-profile";
-
-const doctorPhotos: Record<string, string> = {
-  "Dr. Ümit Alici": images.drAliciPortrait,
-  "Dr. Benjamin Alici": images.leistungenFoto10,
-};
+import { getEditableImage, getEditableTeamStaff } from "@/lib/editable-content";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -21,6 +17,14 @@ export default async function TeamPage({ params }: Props) {
     lang === "tr"
       ? "KBB muayenehane ekibimiz sizin için çalışıyor"
       : "Unser HNO Ordinations-Team steht bemüht um Sie";
+
+  const staff = getEditableTeamStaff(teamStaff);
+  const heroImage = getEditableImage("ordinationHero", images.ordinationHero);
+  const portrait = getEditableImage("drAliciPortrait", images.drAliciPortrait);
+  const doctorPhotos: Record<string, string> = {
+    "Dr. Ümit Alici": portrait,
+    "Dr. Benjamin Alici": images.leistungenFoto10,
+  };
 
   return (
     <>
@@ -66,13 +70,13 @@ export default async function TeamPage({ params }: Props) {
       </div>
 
       <div className="relative h-64 w-full overflow-hidden sm:h-80 lg:h-96">
-        <SiteImage src={images.ordinationHero} alt="HNO Ordination" fill className="object-cover" sizes="100vw" />
+        <SiteImage src={heroImage} alt="HNO Ordination" fill className="object-cover" sizes="100vw" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 className="text-center font-display text-3xl font-semibold text-petrol">{teamTitle}</h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {teamStaff.map((member) => (
+          {staff.map((member) => (
             <article key={member.name} className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-cream-dark">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-soft text-petrol">
                 <ServiceIcon name="health" size={22} />

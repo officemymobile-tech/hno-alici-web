@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Texte bearbeiten – HNO Alici Admin</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <script src="/admin/config.js"></script>
+    <script src="/admin/admin-nav.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="head">
+        <p class="eyebrow">HNO Alici · Website-Inhalte</p>
+        <h1>Texte bearbeiten</h1>
+        <p class="lead">
+          Startseite, Über uns, Ordinationszeiten und Team — auf Deutsch und Türkisch.
+          Nach dem Speichern aktualisiert sich die Website in ca. 2–3 Minuten.
+        </p>
+      </header>
+
+      <div id="status" class="status hidden" role="status" aria-live="polite"></div>
+
+      <form id="form" class="card">
+        <fieldset>
+          <legend>Startseite (Hero)</legend>
+          <div class="grid-2">
+            <label class="field">
+              <span>Überschrift klein (DE)</span>
+              <input type="text" id="heroEyebrowDe" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Überschrift klein (TR)</span>
+              <input type="text" id="heroEyebrowTr" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Titel (DE)</span>
+              <input type="text" id="heroTitleDe" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Titel (TR)</span>
+              <input type="text" id="heroTitleTr" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Untertitel (DE)</span>
+              <input type="text" id="heroSubtitleDe" maxlength="200" />
+            </label>
+            <label class="field">
+              <span>Untertitel (TR)</span>
+              <input type="text" id="heroSubtitleTr" maxlength="200" />
+            </label>
+            <label class="field" style="grid-column: 1 / -1">
+              <span>Zusatzzeile (DE)</span>
+              <input type="text" id="heroTaglineDe" maxlength="200" />
+            </label>
+            <label class="field" style="grid-column: 1 / -1">
+              <span>Zusatzzeile (TR)</span>
+              <input type="text" id="heroTaglineTr" maxlength="200" />
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Über uns (Startseite)</legend>
+          <label class="field">
+            <span>Titel (DE)</span>
+            <input type="text" id="aboutTitleDe" maxlength="200" />
+          </label>
+          <label class="field">
+            <span>Titel (TR)</span>
+            <input type="text" id="aboutTitleTr" maxlength="200" />
+          </label>
+          <label class="field">
+            <span>Einleitung (DE)</span>
+            <textarea id="aboutIntroDe" rows="4" maxlength="2000"></textarea>
+          </label>
+          <label class="field">
+            <span>Einleitung (TR)</span>
+            <textarea id="aboutIntroTr" rows="4" maxlength="2000"></textarea>
+          </label>
+          <label class="field">
+            <span>Philosophie-Zitat (DE)</span>
+            <textarea id="aboutPhilosophyDe" rows="3" maxlength="2000"></textarea>
+          </label>
+          <label class="field">
+            <span>Philosophie-Zitat (TR)</span>
+            <textarea id="aboutPhilosophyTr" rows="3" maxlength="2000"></textarea>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ordinationszeiten (Anzeige)</legend>
+          <p class="img-meta">Format z. B. 09:00–14:00 — wird auf Kontakt- und Startseite angezeigt.</p>
+          <div class="grid-2">
+            <label class="field"><span>Montag (DE)</span><input id="hoursMonDe" maxlength="80" /></label>
+            <label class="field"><span>Montag (TR)</span><input id="hoursMonTr" maxlength="80" /></label>
+            <label class="field"><span>Dienstag (DE)</span><input id="hoursTueDe" maxlength="80" /></label>
+            <label class="field"><span>Dienstag (TR)</span><input id="hoursTueTr" maxlength="80" /></label>
+            <label class="field"><span>Mittwoch (DE)</span><input id="hoursWedDe" maxlength="80" /></label>
+            <label class="field"><span>Mittwoch (TR)</span><input id="hoursWedTr" maxlength="80" /></label>
+            <label class="field"><span>Donnerstag (DE)</span><input id="hoursThuDe" maxlength="80" /></label>
+            <label class="field"><span>Donnerstag (TR)</span><input id="hoursThuTr" maxlength="80" /></label>
+            <label class="field"><span>Freitag (DE)</span><input id="hoursFriDe" maxlength="80" /></label>
+            <label class="field"><span>Freitag (TR)</span><input id="hoursFriTr" maxlength="80" /></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ordinationsteam</legend>
+          <p class="img-meta">Ein Name pro Zeile. Rolle auf Deutsch und Türkisch.</p>
+          <div id="teamList"></div>
+          <button type="button" class="btn btn-ghost" id="addTeamBtn">+ Person hinzufügen</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Speichern</legend>
+          <label class="field">
+            <span>Ordinations-Passwort</span>
+            <input type="password" id="password" autocomplete="current-password" required />
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary" id="saveBtn">Texte veröffentlichen</button>
+        </div>
+      </form>
+    </div>
+    <script src="/admin/inhalte.js"></script>
+  </body>
+</html>

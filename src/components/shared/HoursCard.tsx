@@ -1,8 +1,11 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
+import { getEditableText } from "@/lib/editable-content";
+import type { Locale } from "@/i18n/routing";
 
 export async function HoursCard() {
   const t = await getTranslations("hours");
+  const locale = (await getLocale()) as Locale;
 
   const days = [
     ["monday", "mondayHours"],
@@ -20,7 +23,9 @@ export async function HoursCard() {
         {days.map(([day, hours]) => (
           <div key={day} className="flex justify-between gap-4 border-b border-cream-dark pb-3 text-sm last:border-0">
             <dt className="font-medium text-text">{t(day)}</dt>
-            <dd className="text-right text-text-muted">{t(hours)}</dd>
+            <dd className="text-right text-text-muted">
+              {getEditableText("hours", hours, locale, t(hours))}
+            </dd>
           </div>
         ))}
       </dl>
