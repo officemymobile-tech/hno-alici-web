@@ -1,12 +1,12 @@
 {
-  "active": false,
+  "active": true,
   "variant": "info",
   "title": {
-    "de": "",
+    "de": "Urlaubsankündigung",
     "tr": ""
   },
   "text": {
-    "de": "",
+    "de": "Urlaubsankündigung\n\nLiebe Kundinnen und Kunden,\n\nwir befinden uns vom [Datum] bis einschließlich [Datum] im Urlaub. In dieser Zeit sind wir nur eingeschränkt erreichbar und können Anfragen möglicherweise nicht sofort bearbeiten.\n\nAb [Datum] sind wir wieder wie gewohnt für Sie da.\n\nVielen Dank für Ihr Verständnis.",
     "tr": ""
   },
   "link": {
