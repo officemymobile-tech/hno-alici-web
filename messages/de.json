@@ -34,6 +34,22 @@
     "acute": "Akute Beschwerden? Kurzfristige Termine möglich",
     "phone": "+43 1 6025400"
   },
+  "openStatus": {
+    "open": "Geöffnet",
+    "closed": "Geschlossen",
+    "todayHours": "Heute: {hours}",
+    "opensToday": "Öffnet heute um {time} Uhr",
+    "opensOn": "Nächste Öffnung: {day} {time} Uhr",
+    "days": {
+      "mon": "Montag",
+      "tue": "Dienstag",
+      "wed": "Mittwoch",
+      "thu": "Donnerstag",
+      "fri": "Freitag",
+      "sat": "Samstag",
+      "sun": "Sonntag"
+    }
+  },
   "home": {
     "faq": {
       "eyebrow": "Patienteninfo",

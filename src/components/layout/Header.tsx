@@ -9,6 +9,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ServiceIcon, serviceSlugToIcon } from "@/components/icons/ServiceIcon";
 import { ServicesMegaMenu } from "@/components/layout/ServicesMegaMenu";
+import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
 import { megaMenuCategories } from "@/content/mega-menu";
 import { images } from "@/content/site-content";
 import { serviceSlugToKey } from "@/lib/site";
@@ -52,9 +53,12 @@ export function Header() {
             className="h-12 w-auto"
             priority
           />
-          <span className="hidden text-xs font-medium uppercase tracking-[0.15em] text-text-muted sm:block">
-            HNO · Wien 1100
-          </span>
+          <div className="hidden flex-col gap-1.5 sm:flex">
+            <span className="text-xs font-medium uppercase tracking-[0.15em] text-text-muted">
+              HNO · Wien 1100
+            </span>
+            <ClinicOpenStatus variant="compact" surface="light" />
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">

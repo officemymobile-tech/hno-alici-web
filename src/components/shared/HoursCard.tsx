@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
 
 export async function HoursCard() {
   const t = await getTranslations("hours");
@@ -13,6 +14,7 @@ export async function HoursCard() {
 
   return (
     <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-cream-dark">
+      <ClinicOpenStatus variant="card" className="mb-6" />
       <h3 className="font-display text-2xl font-semibold text-petrol">{t("title")}</h3>
       <dl className="mt-6 space-y-3">
         {days.map(([day, hours]) => (

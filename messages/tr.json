@@ -34,6 +34,22 @@
     "acute": "Acil şikayetler mi? Kısa sürede randevu mümkün",
     "phone": "+43 1 6025400"
   },
+  "openStatus": {
+    "open": "Açık",
+    "closed": "Kapalı",
+    "todayHours": "Bugün: {hours}",
+    "opensToday": "Bugün {time}’de açılıyor",
+    "opensOn": "Sonraki açılış: {day} {time}",
+    "days": {
+      "mon": "Pazartesi",
+      "tue": "Salı",
+      "wed": "Çarşamba",
+      "thu": "Perşembe",
+      "fri": "Cuma",
+      "sat": "Cumartesi",
+      "sun": "Pazar"
+    }
+  },
   "home": {
     "faq": {
       "eyebrow": "Hasta bilgisi",
