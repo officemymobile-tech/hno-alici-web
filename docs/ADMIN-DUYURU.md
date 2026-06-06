@@ -3,18 +3,21 @@
 Die Ordination kann **tägliche Hinweise** selbst pflegen — **ohne Ihr persönliches GitHub-Konto**.
 
 - **Admin-URL:** https://hno-alici.at/admin/
-- **Website:** Banner oben auf allen Seiten (wenn aktiv)
+- **Website:** Menü **„Aktuelles“** in der Navigation (wenn aktiv)
+- **Ausführliche Anleitung für die Ordination:** [`docs/ANLEITUNG-ORDINATION.md`](./ANLEITUNG-ORDINATION.md)
 
 ---
 
 ## Für die Ordination (tägliche Nutzung)
+
+Kurzfassung — Details siehe **ANLEITUNG-ORDINATION.md**:
 
 1. Browser öffnen: **https://hno-alici.at/admin/**
 2. Texte auf **Deutsch** und **Türkisch** eintragen
 3. Optional: „Gültig bis“ setzen (z. B. nur heute)
 4. **Ordinations-Passwort** eingeben (vom Techniker — **nicht** GitHub)
 5. **Veröffentlichen** klicken
-6. Nach ca. **2–3 Minuten** erscheint der Hinweis auf der Website
+6. Nach ca. **2–3 Minuten** erscheint der Hinweis unter **„Aktuelles“** auf der Website
 
 **Ausblenden:** Button „Ausblenden (deaktivieren)“ — Passwort eingeben, fertig.
 
@@ -57,7 +60,7 @@ Danach **committen und pushen** → GitHub Pages baut neu.
 | Teil | Rolle |
 |------|--------|
 | `src/content/announcements.json` | Inhalt der Mitteilung |
-| `AnnouncementBanner` | Anzeige auf der Website |
+| `AktuellesNavMenu` | Anzeige im Navigationsmenü „Aktuelles“ |
 | `public/admin/` | Formular für die Ordination |
 | Cloudflare Worker | Speichert JSON via GitHub API |
 | GitHub Actions | Baut die Website nach jedem Push neu |

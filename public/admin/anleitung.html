@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Anleitung — Mitteilungen veröffentlichen | HNO Alici</title>
+    <link rel="stylesheet" href="/admin/admin.css" />
+    <style>
+      .guide {
+        max-width: 52rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+        line-height: 1.55;
+        color: #1c2426;
+      }
+      .guide h1 {
+        font-size: 1.75rem;
+        color: #0f3339;
+        margin: 0 0 0.5rem;
+      }
+      .guide .sub {
+        color: #5a6568;
+        margin-bottom: 2rem;
+      }
+      .guide h2 {
+        font-size: 1.15rem;
+        color: #1a4a52;
+        margin: 2rem 0 0.75rem;
+        padding-bottom: 0.35rem;
+        border-bottom: 2px solid #e8f2f4;
+      }
+      .guide h3 {
+        font-size: 1rem;
+        margin: 1.25rem 0 0.5rem;
+        color: #1a4a52;
+      }
+      .guide table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        margin: 0.75rem 0 1rem;
+      }
+      .guide th,
+      .guide td {
+        border: 1px solid #f0ebe3;
+        padding: 0.5rem 0.65rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      .guide th {
+        background: #faf8f5;
+        font-weight: 600;
+      }
+      .guide .box {
+        background: #e8f2f4;
+        border: 1px solid #1a4a5233;
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        margin: 1rem 0;
+      }
+      .guide .box strong {
+        color: #0f3339;
+      }
+      .guide code,
+      .guide .pw {
+        font-family: ui-monospace, monospace;
+        background: #fff;
+        padding: 0.15rem 0.4rem;
+        border-radius: 0.25rem;
+        border: 1px solid #f0ebe3;
+      }
+      .guide ol,
+      .guide ul {
+        padding-left: 1.35rem;
+        margin: 0.5rem 0 1rem;
+      }
+      .guide li {
+        margin: 0.35rem 0;
+      }
+      .guide .checklist {
+        list-style: none;
+        padding-left: 0;
+      }
+      .guide .checklist li::before {
+        content: "☐ ";
+      }
+      .guide .tr-block {
+        background: #faf8f5;
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        margin-top: 2rem;
+      }
+      .guide .actions-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .guide {
+          padding: 0;
+          max-width: none;
+        }
+        .guide h2 {
+          page-break-after: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="guide">
+      <div class="actions-top no-print">
+        <a class="btn btn-primary" href="/admin/">Zur Admin-Seite</a>
+        <button type="button" class="btn btn-ghost" onclick="window.print()">Als PDF drucken</button>
+      </div>
+
+      <p class="eyebrow" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: #c4a35a; font-weight: 600">
+        HNO Alici · Ordination
+      </p>
+      <h1>Anleitung: Mitteilungen auf der Website</h1>
+      <p class="sub">Für Empfang und Ordinationsteam — kein GitHub, kein Techniker nötig.</p>
+
+      <div class="box">
+        <strong>Admin-Adresse:</strong>
+        <a href="https://hno-alici.at/admin/">https://hno-alici.at/admin/</a><br />
+        <strong>Passwort:</strong> <span class="pw">SDyf1F4azlxPgonOBX</span><br />
+        <strong>Patienten sehen es unter:</strong> Menü „Aktuelles“ (türkische Seite: „Güncel“)<br />
+        <strong>Wartezeit:</strong> ca. 2–3 Minuten nach dem Speichern
+      </div>
+
+      <h2>Schritt für Schritt</h2>
+      <ol>
+        <li>Browser öffnen und <strong>https://hno-alici.at/admin/</strong> aufrufen (Lesezeichen empfohlen).</li>
+        <li>
+          <strong>Deutsch</strong> und <strong>Türkisch</strong> ausfüllen — mindestens Text in einer Sprache,
+          besser in beiden.
+        </li>
+        <li>Häkchen bei <strong>„Mitteilung auf der Website anzeigen“</strong> setzen.</li>
+        <li>
+          <strong>Art der Meldung</strong> wählen:
+          <em>Information</em> (normal), <em>Hinweis</em> (wichtig), <em>Dringend</em> (sehr wichtig).
+        </li>
+        <li>Optional <strong>„Gültig bis“</strong> — Meldung verschwindet automatisch an diesem Tag.</li>
+        <li>Optional <strong>Link</strong> — z. B. zur Terminseite.</li>
+        <li>Passwort eingeben: <span class="pw">SDyf1F4azlxPgonOBX</span></li>
+        <li>Auf <strong>„Veröffentlichen“</strong> klicken.</li>
+        <li>2–3 Minuten warten, dann auf <strong>hno-alici.at</strong> unter <strong>„Aktuelles“</strong> prüfen.</li>
+      </ol>
+
+      <h2>Felder im Formular</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feld</th>
+            <th>Bedeutung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mitteilung anzeigen</td>
+            <td>Muss aktiviert sein, sonst sieht niemand die Meldung.</td>
+          </tr>
+          <tr>
+            <td>Art der Meldung</td>
+            <td>Farbe: Information (ruhig) · Hinweis (gold) · Dringend (dunkel)</td>
+          </tr>
+          <tr>
+            <td>Gültig bis</td>
+            <td>Leer = bis manuell ausgeblendet. Datum = automatisches Ende.</td>
+          </tr>
+          <tr>
+            <td>Titel / Text DE &amp; TR</td>
+            <td>Kurze, klare Formulierung. Max. 500 Zeichen Text.</td>
+          </tr>
+          <tr>
+            <td>Link</td>
+            <td>Optional — URL + Linktext in beiden Sprachen.</td>
+          </tr>
+          <tr>
+            <td>Passwort</td>
+            <td>Nur für Speichern/Ausblenden — intern halten!</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Mitteilung ausblenden</h2>
+      <ul>
+        <li><strong>„Ausblenden (deaktivieren)“</strong> + Passwort, oder</li>
+        <li>Häkchen entfernen + <strong>„Veröffentlichen“</strong></li>
+      </ul>
+
+      <h2>Beispiel — Heute früher geschlossen</h2>
+      <table>
+        <tbody>
+          <tr><th>Art</th><td>Hinweis</td></tr>
+          <tr><th>Gültig bis</th><td>Heutiges Datum</td></tr>
+          <tr><th>Text DE</th><td>Wir schließen heute bereits um 12:00 Uhr. Vielen Dank für Ihr Verständnis.</td></tr>
+          <tr><th>Text TR</th><td>Bugün saat 12:00'de kapanıyoruz. Anlayışınız için teşekkürler.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Wenn es nicht funktioniert</h2>
+      <ul>
+        <li>Grüne Erfolgsmeldung nach „Veröffentlichen“ gesehen?</li>
+        <li>Häkchen „anzeigen“ gesetzt?</li>
+        <li>„Gültig bis“ nicht schon abgelaufen?</li>
+        <li>2–3 Minuten gewartet und Seite neu geladen?</li>
+        <li>Unter <strong>„Aktuelles“</strong> in der Menüleiste nachgeschaut?</li>
+        <li>Bei Passwortfehler: exakt eingeben, Techniker kontaktieren.</li>
+      </ul>
+
+      <h2>Checkliste</h2>
+      <ul class="checklist">
+        <li>Text DE und TR eingetragen</li>
+        <li>Häkchen „Mitteilung anzeigen“ gesetzt</li>
+        <li>Richtige Art gewählt</li>
+        <li>Passwort eingegeben</li>
+        <li>„Veröffentlichen“ geklickt</li>
+        <li>Unter „Aktuelles“ auf der Website geprüft</li>
+      </ul>
+
+      <div class="tr-block">
+        <h2 style="margin-top: 0">Türkçe özet</h2>
+        <ol>
+          <li><strong>https://hno-alici.at/admin/</strong> adresini açın</li>
+          <li>Almanca ve Türkçe metinleri yazın</li>
+          <li>„Mitteilung auf der Website anzeigen“ kutusunu işaretleyin</li>
+          <li>Şifre: <span class="pw">SDyf1F4azlxPgonOBX</span></li>
+          <li>„Veröffentlichen“ (Yayınla) tıklayın</li>
+          <li>2–3 dakika sonra sitede <strong>„Güncel“</strong> menüsüne bakın</li>
+        </ol>
+        <p>Gizlemek için: „Ausblenden“ + şifre.</p>
+      </div>
+
+      <p style="margin-top: 2rem; font-size: 0.85rem; color: #5a6568">
+        HNO Alici · Senefeldergasse 3/1, 1100 Wien · ordination@hno-alici.at · +43 1 6025400
+      </p>
+    </div>
+  </body>
+</html>
