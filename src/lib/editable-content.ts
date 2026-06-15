@@ -44,6 +44,7 @@ export function getEditableTeamStaff(
 export const editableImageKeys = [
   "ordinationHero",
   "drAliciPortrait",
+  "drMeierPortrait",
   "teamFrAlici",
   "leistungenOverview",
 ] as const;
@@ -62,6 +63,11 @@ export const editableImageLabels: Record<
   drAliciPortrait: {
     de: "Porträt Dr. Ümit Alici",
     tr: "Dr. Ümit Alici portresi",
+    hint: "Hochformat, mind. 800 px",
+  },
+  drMeierPortrait: {
+    de: "Porträt Dr. Sigrid Meier",
+    tr: "Dr. Sigrid Meier portresi",
     hint: "Hochformat, mind. 800 px",
   },
   teamFrAlici: {

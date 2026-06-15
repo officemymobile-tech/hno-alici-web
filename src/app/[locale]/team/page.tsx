@@ -3,7 +3,6 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { SiteImage } from "@/components/ui/SiteImage";
 import { doctors, images, teamStaff } from "@/content/site-content";
-import { doctorProfile } from "@/content/doctor-profile";
 import { getEditableImage, getEditableTeamStaff } from "@/lib/editable-content";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -21,8 +20,10 @@ export default async function TeamPage({ params }: Props) {
   const staff = getEditableTeamStaff(teamStaff);
   const heroImage = getEditableImage("ordinationHero", images.ordinationHero);
   const portrait = getEditableImage("drAliciPortrait", images.drAliciPortrait);
+  const meierPortrait = getEditableImage("drMeierPortrait", images.drMeierPortrait);
   const doctorPhotos: Record<string, string> = {
     "Dr. Ümit Alici": portrait,
+    "Dr. Sigrid Meier": meierPortrait,
     "Dr. Benjamin Alici": images.leistungenFoto10,
   };
 
@@ -34,24 +35,13 @@ export default async function TeamPage({ params }: Props) {
           {doctors.map((doc) => (
             <article key={doc.name} className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-cream-dark">
               <div className="relative aspect-[3/4]">
-                {"anonymous" in doc && doc.anonymous ? (
-                  <div
-                    className="flex h-full flex-col items-center justify-center bg-gradient-to-br from-petrol to-petrol-dark p-8"
-                    aria-hidden
-                  >
-                    <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white/10 ring-2 ring-gold/40 sm:h-32 sm:w-32">
-                      <ServiceIcon name="user" size={48} className="text-white/90" />
-                    </div>
-                  </div>
-                ) : (
-                  <SiteImage
-                    src={doctorPhotos[doc.name] ?? images.drAliciPortrait}
-                    alt={doc.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                )}
+                <SiteImage
+                  src={doctorPhotos[doc.name] ?? images.drAliciPortrait}
+                  alt={doc.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <div className={`p-6 ${doc.primary ? "bg-petrol text-white" : ""}`}>
                 <h2 className="font-display text-2xl font-semibold">{doc.name}</h2>

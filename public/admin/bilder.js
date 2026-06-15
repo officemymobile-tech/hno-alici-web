@@ -5,6 +5,7 @@
   const IMAGE_FIELDS = [
     { key: "ordinationHero", label: "Startseite — Hintergrundfoto", hint: "Breites Querformat, mind. 1600 px" },
     { key: "drAliciPortrait", label: "Porträt Dr. Ümit Alici", hint: "Hochformat, mind. 800 px" },
+    { key: "drMeierPortrait", label: "Porträt Dr. Sigrid Meier", hint: "Hochformat, mind. 800 px" },
     { key: "teamFrAlici", label: "Team-Foto Ordination", hint: "Querformat empfohlen" },
     { key: "leistungenOverview", label: "Leistungen — Übersichtsbild", hint: "Querformat empfohlen" },
   ];

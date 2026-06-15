@@ -11,6 +11,7 @@ export const images = {
   ordinationHero: "/images/pro/ordination-hero-pro.jpg",
   ordinationBanner: "/images/ordination-banner.jpg",
   drAliciPortrait: "/images/pro/dr-alici-portrait-pro.jpg",
+  drMeierPortrait: "/images/pro/dr-meier-pro.jpg",
   leistungenFoto09: "/images/pro/leistungen-foto-09-pro.jpg",
   leistungenFoto10: "/images/pro/leistungen-foto-10-pro.jpg",
   leistungenOverview: "/images/pro/leistungen-overview-pro.jpg",
@@ -28,7 +29,6 @@ export const doctors = [
     name: "Dr. Sigrid Meier",
     title: { de: "Fachärztin für Hals-, Nasen- u. Ohrenheilkunde", tr: "KBB Uzmanı" },
     primary: false,
-    anonymous: true,
   },
   {
     name: "Dr. Benjamin Alici",
