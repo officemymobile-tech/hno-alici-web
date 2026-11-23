@@ -1,4 +1,7 @@
-export const seoLandings = {
+import { isSanityContentEnabled, sanityReadFailed } from "@/lib/content-source";
+import { fetchBlogPosts, fetchLandingPages } from "@/lib/sanity/queries";
+
+const localSeoLandings = {
   turkishHno: {
     slug: { de: "tuerkischer-hno-arzt-wien", tr: "turk-kbb-doktoru-wien" },
     title: {
@@ -71,9 +74,45 @@ export const seoLandings = {
       ],
     },
   },
-} as const;
+};
 
-export const blogPosts = [
+type SeoLandingEntry = (typeof localSeoLandings)[keyof typeof localSeoLandings];
+
+// Resolved once at build time — same overlay pattern as every other content
+// source. Only overrides fields actually set in Sanity (per-field, not a
+// blind spread) so an unpopulated field never blanks out real local copy —
+// same caution as seo-services.ts's cardText/shortTitle. Routes/URLs are
+// untouched: `slug` stays sourced from this local object always, matching
+// the explicit instruction not to change existing URLs or indexing.
+export let seoLandings: Record<"turkishHno" | "kinderHno", SeoLandingEntry> = localSeoLandings;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchLandingPages();
+    if (overlay.length) {
+      const merged = { ...localSeoLandings };
+      for (const p of overlay) {
+        const key = p.slugKey;
+        if (key in merged) {
+          const existing = merged[key];
+          merged[key] = {
+            ...existing,
+            title: p.title.de ? p.title : existing.title,
+            h1: p.h1.de ? p.h1 : existing.h1,
+            metaDescription: p.metaDescription.de ? p.metaDescription : existing.metaDescription,
+            keywords: p.keywords.length ? p.keywords : existing.keywords,
+            hero: p.hero.de ? p.hero : existing.hero,
+            benefits: p.benefits.de.length ? p.benefits : existing.benefits,
+          };
+        }
+      }
+      seoLandings = merged;
+    }
+  } catch (e) {
+    sanityReadFailed("seo-landings seoLandings", e);
+  }
+}
+
+const localBlogPosts = [
   {
     slug: "ohrenschmerzen-kind-wien",
     date: "2026-05-15",
@@ -108,4 +147,23 @@ export const blogPosts = [
     },
     keywords: ["Allergietest Wien", "Allergie Wien 1100"],
   },
-] as const;
+];
+
+// Resolved once at build time. Sanity-sourced posts override a matching
+// local slug and any Sanity-only posts (new ones published only via Studio)
+// are appended — blog is meant to be primarily managed in Sanity going
+// forward, unlike the other overlays which only ever override existing
+// fields. Dropped `as const` for the same reason as site.ts/doctor-profile.ts.
+export let blogPosts: typeof localBlogPosts = localBlogPosts;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchBlogPosts();
+    if (overlay.length) {
+      const bySlug = new Map(localBlogPosts.map((p) => [p.slug, p]));
+      for (const p of overlay) bySlug.set(p.slug, { ...bySlug.get(p.slug), ...p });
+      blogPosts = [...bySlug.values()];
+    }
+  } catch (e) {
+    sanityReadFailed("blogPosts", e);
+  }
+}

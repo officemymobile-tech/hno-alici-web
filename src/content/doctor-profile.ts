@@ -1,12 +1,32 @@
 import { images } from "./site-content";
+import { isSanityContentEnabled, sanityReadFailed } from "@/lib/content-source";
+import { fetchDoctorProfile } from "@/lib/sanity/queries";
 
-export const doctorProfile = {
+type DoctorProfileShape = {
+  name: string;
+  portrait: string;
+  portraitPosition?: string;
+  tagline: { de: string; tr: string };
+  clinicalTitle?: { de: string; tr: string };
+  medicalSpecialties?: string[];
+  cv: { de: string[]; tr: string[] };
+  qualifications: { de: string[]; tr: string[] };
+  philosophy: { de: string; tr: string };
+  usps: { de: string[]; tr: string[] };
+};
+
+const localDoctorProfile: DoctorProfileShape = {
   name: "Dr. Ümit Alici",
   portrait: images.drAliciPortrait,
   tagline: {
     de: "Ihr türkisch- und deutschsprachiger HNO-Facharzt in Wien Favoriten",
     tr: "Wien Favoriten'de Türkçe ve Almanca KBB uzmanınız",
   },
+  clinicalTitle: {
+    de: "Facharzt für Hals-, Nasen- und Ohrenheilkunde",
+    tr: "Kulak Burun Boğaz Uzmanı",
+  },
+  medicalSpecialties: ["Otolaryngology", "Pediatric Otolaryngology", "Allergy"],
   cv: {
     de: [
       "Facharzt für Hals-, Nasen- und Ohrenheilkunde (Österreich)",
@@ -49,7 +69,33 @@ export const doctorProfile = {
     de: ["Türkisch & Deutsch", "Kinder-HNO", "Akuttermine", "Alle Kassen"],
     tr: ["Türkçe & Almanca", "Çocuk KBB", "Acil randevu", "Tüm sigortalar"],
   },
-} as const;
+};
+
+// Resolved once at build time — dropped `as const` since the overlay's
+// values are plain runtime strings (same reasoning as site.ts siteConfig).
+export let doctorProfile = localDoctorProfile;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchDoctorProfile();
+    if (!overlay) {
+      sanityReadFailed("doctor-profile (doctor.dr-uemit-alici missing)", new Error("fetchDoctorProfile returned null"));
+    }
+    doctorProfile = {
+      name: overlay.name || localDoctorProfile.name,
+      portrait: overlay.portrait || localDoctorProfile.portrait,
+      portraitPosition: overlay.portrait ? overlay.portraitPosition : localDoctorProfile.portraitPosition,
+      tagline: overlay.tagline.de ? overlay.tagline : localDoctorProfile.tagline,
+      clinicalTitle: overlay.clinicalTitle ?? localDoctorProfile.clinicalTitle,
+      medicalSpecialties: overlay.medicalSpecialties ?? localDoctorProfile.medicalSpecialties,
+      cv: overlay.cv.de.length ? overlay.cv : localDoctorProfile.cv,
+      qualifications: overlay.qualifications.de.length ? overlay.qualifications : localDoctorProfile.qualifications,
+      philosophy: overlay.philosophy.de ? overlay.philosophy : localDoctorProfile.philosophy,
+      usps: overlay.usps.de.length ? overlay.usps : localDoctorProfile.usps,
+    };
+  } catch (e) {
+    sanityReadFailed("doctor-profile", e);
+  }
+}
 
 export const kassen = [
   {

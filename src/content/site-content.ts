@@ -49,8 +49,6 @@ export const teamStaff = [
   { name: "Frau Marielle Bahome", role: { de: "Ordinationsteam", tr: "Ordinationsteam" } },
 ] as const;
 
-export const facebookUrl = "https://de-de.facebook.com/HNO.ALICI/";
-
 export const leistungenContent = {
   intro: {
     de: "Sämtliche akute und chronische Erkrankungen im HNO Bereich werden diagnostiziert und behandelt.",

@@ -2,3 +2,4 @@
 .dev.vars
 *.local
 setup-secrets.txt
+node_modules/

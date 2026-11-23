@@ -7,6 +7,7 @@ import { AlertCircle, AlertTriangle, ChevronDown, Info, Megaphone } from "lucide
 import type { AnnouncementData, AnnouncementVariant } from "@/lib/announcements";
 import type { Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
+import { getEditableText } from "@/lib/editable-content";
 
 const variantStyles: Record<
   AnnouncementVariant,
@@ -87,7 +88,7 @@ export function AktuellesNavMenu({ locale, announcement, className, onNavigate }
       >
         <span className="relative inline-flex items-center gap-1.5">
           <Megaphone size={15} strokeWidth={1.75} className="opacity-80" aria-hidden />
-          {t("label")}
+          {getEditableText("aktuellesMenu", "label", locale, t("label"))}
           {hasNews ? (
             <span
               className={cn("absolute -right-2 -top-1 h-2 w-2 rounded-full", badge, hasNews && "animate-pulse")}
@@ -122,7 +123,7 @@ export function AktuellesNavMenu({ locale, announcement, className, onNavigate }
                       isUrgent ? "text-gold-light" : "text-gold",
                     )}
                   >
-                    {t("eyebrow")}
+                    {getEditableText("aktuellesMenu", "eyebrow", locale, t("eyebrow"))}
                   </p>
                   {title ? (
                     <p
@@ -164,8 +165,12 @@ export function AktuellesNavMenu({ locale, announcement, className, onNavigate }
           ) : (
             <div className="rounded-xl bg-cream/60 px-5 py-6 text-center">
               <Megaphone className="mx-auto h-8 w-8 text-text-muted/40" strokeWidth={1.25} aria-hidden />
-              <p className="mt-3 text-sm font-medium text-text">{t("emptyTitle")}</p>
-              <p className="mt-1 text-xs text-text-muted">{t("emptyText")}</p>
+              <p className="mt-3 text-sm font-medium text-text">
+                {getEditableText("aktuellesMenu", "emptyTitle", locale, t("emptyTitle"))}
+              </p>
+              <p className="mt-1 text-xs text-text-muted">
+                {getEditableText("aktuellesMenu", "emptyText", locale, t("emptyText"))}
+              </p>
             </div>
           )}
         </div>
@@ -185,7 +190,9 @@ export function AktuellesMobilePanel({
   if (!hasNews) {
     return (
       <div className="rounded-xl border border-cream-dark bg-cream/50 px-4 py-3">
-        <p className="text-sm font-medium text-text-muted">{t("emptyTitle")}</p>
+        <p className="text-sm font-medium text-text-muted">
+          {getEditableText("aktuellesMenu", "emptyTitle", locale, t("emptyTitle"))}
+        </p>
       </div>
     );
   }

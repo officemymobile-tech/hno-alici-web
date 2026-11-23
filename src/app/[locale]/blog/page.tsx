@@ -28,7 +28,7 @@ export default async function BlogPage({ params }: Props) {
       <div className="mx-auto max-w-3xl space-y-8 px-4 py-16 sm:px-6 lg:px-8">
         {blogPosts.map((post) => (
           <article key={post.slug} className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-cream-dark transition hover:shadow-lg">
-            <time className="text-xs font-medium uppercase tracking-widest text-gold">
+            <time className="text-xs font-medium uppercase tracking-widest text-gold-ink">
               {new Date(post.date).toLocaleDateString(lang === "tr" ? "tr-AT" : "de-AT")}
             </time>
             <h2 className="mt-3 font-display text-2xl font-semibold text-petrol">

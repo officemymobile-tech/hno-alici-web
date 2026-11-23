@@ -30,6 +30,34 @@ const staticPaths = [
   "/cocuk-kbb-wien-1100",
 ];
 
+// The 4 locale-exclusive landing pages don't have a same-path counterpart in
+// the other locale (/de/tuerkischer-hno-arzt-wien's real alternate is
+// /tr/turk-kbb-doktoru-wien, a different path) — same cross-mapping already
+// used by each page's own generateMetadata (Phase 2/3 hreflang fix).
+// Every other path is the same under both locales. This mirrors that
+// mapping at the sitemap level (Google supports hreflang annotations
+// directly in sitemaps via `alternates.languages`; this was previously
+// only declared per-page in the HTML <head>, never here).
+const crossLocalePath: Record<string, string> = {
+  "/tuerkischer-hno-arzt-wien": "/turk-kbb-doktoru-wien",
+  "/turk-kbb-doktoru-wien": "/tuerkischer-hno-arzt-wien",
+  "/kinder-hno-wien-1100": "/cocuk-kbb-wien-1100",
+  "/cocuk-kbb-wien-1100": "/kinder-hno-wien-1100",
+};
+
+function languageAlternates(path: string) {
+  // For a tr-exclusive path (e.g. /turk-kbb-doktoru-wien), the German
+  // alternate is the cross-mapped path; for a de-exclusive or shared path,
+  // the German alternate is the path itself (and vice versa for tr).
+  const isTrExclusive = path === "/turk-kbb-doktoru-wien" || path === "/cocuk-kbb-wien-1100";
+  const dePart = isTrExclusive ? crossLocalePath[path] : path;
+  const trPart = isTrExclusive ? path : (crossLocalePath[path] ?? path);
+  return {
+    "de-AT": `${baseUrl}/de${dePart}/`,
+    "tr-AT": `${baseUrl}/tr${trPart}/`,
+  };
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
@@ -45,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: path === "" || path === "/blog" ? "weekly" : "monthly",
         priority: path === "" ? 1 : path.includes("hno") || path.includes("kbb") ? 0.9 : 0.8,
+        alternates: { languages: languageAlternates(path) },
       });
     }
 
@@ -54,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.85,
+        alternates: {
+          languages: {
+            "de-AT": `${baseUrl}/de/leistungen/${slug}/`,
+            "tr-AT": `${baseUrl}/tr/leistungen/${slug}/`,
+          },
+        },
       });
     }
 
@@ -63,6 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(post.date),
         changeFrequency: "monthly",
         priority: 0.7,
+        alternates: {
+          languages: {
+            "de-AT": `${baseUrl}/de/blog/${post.slug}/`,
+            "tr-AT": `${baseUrl}/tr/blog/${post.slug}/`,
+          },
+        },
       });
     }
   }

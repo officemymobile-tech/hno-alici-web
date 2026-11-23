@@ -1,0 +1,13 @@
+name = "hno-alici-sanity-rebuild"
+main = "sanity-rebuild-webhook.js"
+compatibility_date = "2026-11-21"
+
+# Secrets - set via `wrangler secret put <name> --config workers/wrangler-sanity-rebuild.toml`
+# (never committed; see sanity-rebuild-webhook.js's header comment for scope):
+#   wrangler secret put SANITY_WEBHOOK_SECRET
+#   wrangler secret put GITHUB_PAT
+
+[vars]
+GITHUB_OWNER = "officemymobile-tech"
+GITHUB_REPO = "hno-alici-web"
+DISPATCH_EVENT_TYPE = "sanity-content-published"

@@ -42,6 +42,7 @@
     "phone": "+43 1 6025400"
   },
   "openStatus": {
+    "checking": "Status wird geprüft …",
     "open": "Geöffnet",
     "closed": "Geschlossen",
     "todayHours": "Heute: {hours}",
@@ -71,7 +72,12 @@
     "tagline": "Moderne HNO-Medizin in Wien Favoriten",
     "ctaAppointment": "Termin buchen",
     "ctaAcute": "Akuttermin anfragen",
-    "ctaAbout": "Arzt kennenlernen"
+    "ctaAbout": "Arzt kennenlernen",
+    "badges": {
+      "family": "Erwachsene & Kinder",
+      "diagnostics": "Moderne Diagnostik",
+      "trust": "Erfahren & Vertrauensvoll"
+    }
   },
   "acute": {
     "title": "Akute Ohrenschmerzen?",
@@ -101,11 +107,17 @@
     }
   },
   "about": {
+    "eyebrow": "Ihr HNO-Facharzt",
     "title": "Ihr Ansprechpartner für HNO in Wien",
     "intro": "Dr. Ümit Alici ist Facharzt für Hals-, Nasen- und Ohrenheilkunde und der vertrauensvolle Ansprechpartner unserer Ordination in Wien Favoriten. Patienten schätzen seine ruhige Art, seine Erfahrung in der Kinder-HNO und die Möglichkeit, auf Deutsch und Türkisch beraten zu werden.",
     "philosophy": "Für mich steht der Mensch im Mittelpunkt – nicht nur die Diagnose. Ich nehme mir Zeit für Ihre Beschwerden, erkläre verständlich und begleite Sie von der ersten Untersuchung bis zur Therapie.",
     "whyHno": "Die HNO-Heilkunde verbindet präzise Diagnostik mit spürbaren Verbesserungen im Alltag – ob beim Hören, Atmen, Schlucken oder bei Schwindel. Genau diese Verbindung macht dieses Fach für mich so bedeutsam.",
-    "expectations": "Was Sie erwarten dürfen: eine gründliche Anamnese, moderne Diagnostik, klare Empfehlungen und eine Ordination, in der Sie sich ernst genommen fühlen – als Erwachsener wie als Kind."
+    "expectations": "Was Sie erwarten dürfen: eine gründliche Anamnese, moderne Diagnostik, klare Empfehlungen und eine Ordination, in der Sie sich ernst genommen fühlen – als Erwachsener wie als Kind.",
+    "checklist": [
+      "Gründliche Anamnese & moderne Diagnostik",
+      "Klare Empfehlungen, verständlich erklärt",
+      "Für Erwachsene und Kinder gleichermaßen da"
+    ]
   },
   "services": {
     "title": "Leistungen",
@@ -196,7 +208,7 @@
     "maps": "Route planen"
   },
   "appointment": {
-    "title": "Online Termin",
+    "title": "Terminanfrage senden",
     "subtitle": "Vereinbaren Sie Ihren Besuch in der HNO-Ordination Wien Favoriten",
     "text": "Für eine Terminvereinbarung rufen Sie uns an oder schreiben Sie uns eine E-Mail. Bei akuten Beschwerden empfehlen wir einen telefonischen Kontakt.",
     "ctaPhone": "Jetzt anrufen",

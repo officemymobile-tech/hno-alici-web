@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "doctor.dr-sigrid-meier",
+    "_type": "doctor",
+    "name": "Dr. Sigrid Meier",
+    "isPrimary": false,
+    "clinicalTitle": {
+      "de": "Fachärztin für Hals-, Nasen- u. Ohrenheilkunde",
+      "tr": "KBB Uzmanı"
+    }
+  },
+  {
+    "_id": "doctor.dr-benjamin-alici",
+    "_type": "doctor",
+    "name": "Dr. Benjamin Alici",
+    "isPrimary": false,
+    "clinicalTitle": {
+      "de": "Facharzt für Hals-, Nasen- u. Ohrenheilkunde",
+      "tr": "KBB Uzmanı"
+    }
+  }
+]

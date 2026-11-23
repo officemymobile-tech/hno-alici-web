@@ -1,4 +1,19 @@
-export const reviewPlatforms = {
+import { isSanityContentEnabled, sanityReadFailed } from "@/lib/content-source";
+import { fetchReviewPlatforms, fetchPatientReviews } from "@/lib/sanity/queries";
+
+type ReviewPlatformData = {
+  name: string;
+  rating: number;
+  maxRating: number;
+  reviewCount: number;
+  url: string;
+  writeReviewUrl?: string;
+  mapsEmbedQuery?: string;
+};
+
+type ReviewPlatformKey = "google" | "docfinder" | "herold";
+
+const localReviewPlatforms: Record<ReviewPlatformKey, ReviewPlatformData> = {
   google: {
     name: "Google",
     rating: 4.0,
@@ -23,7 +38,31 @@ export const reviewPlatforms = {
     reviewCount: 2,
     url: "https://www.herold.at/gelbe-seiten/wien/Gz9LR/dr-alici-uemit/",
   },
-} as const;
+};
+
+// Resolved once at build time — same overlay pattern as every other content
+// source. Real, sensitive third-party ratings data (see reviewPlatform.ts's
+// schema comment) — the merge only ever overrides rating/count/urls, never
+// `mapsEmbedQuery` (a technical Google-Maps-embed parameter, not redactional
+// content, so it always stays the local, code-maintained value).
+export let reviewPlatforms: Record<ReviewPlatformKey, ReviewPlatformData> = localReviewPlatforms;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchReviewPlatforms();
+    if (overlay.length) {
+      const merged: Record<ReviewPlatformKey, ReviewPlatformData> = { ...localReviewPlatforms };
+      for (const p of overlay) {
+        const key = p.id as ReviewPlatformKey;
+        if (key in merged) {
+          merged[key] = { ...merged[key], name: p.name, rating: p.rating, maxRating: p.maxRating, reviewCount: p.reviewCount, url: p.url, writeReviewUrl: p.writeReviewUrl ?? merged[key].writeReviewUrl };
+        }
+      }
+      reviewPlatforms = merged;
+    }
+  } catch (e) {
+    sanityReadFailed("reviews.ts reviewPlatforms", e);
+  }
+}
 
 export type ReviewItem = {
   id: string;
@@ -35,7 +74,7 @@ export type ReviewItem = {
   locale?: "de" | "en";
 };
 
-export const patientReviews: ReviewItem[] = [
+const localPatientReviews: ReviewItem[] = [
   {
     id: "1",
     rating: 5,
@@ -104,3 +143,32 @@ export const patientReviews: ReviewItem[] = [
     source: "docfinder",
   },
 ];
+
+// Resolved once at build time. Sanity-sourced reviews override a matching
+// local `id` and any Sanity-only reviews (new ones added only via Studio)
+// are appended — same append-on-new-entry behavior as blogPosts, since new
+// patient reviews are expected to arrive over time, not just edits to
+// existing ones.
+export let patientReviews: ReviewItem[] = localPatientReviews;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchPatientReviews();
+    if (overlay.length) {
+      const byId = new Map(localPatientReviews.map((r) => [r.id, r]));
+      for (const r of overlay) {
+        byId.set(r.id, {
+          id: r.id,
+          rating: r.rating,
+          title: r.title,
+          text: r.text,
+          author: r.author,
+          source: r.source,
+          locale: r.originalLocale === "en" ? "en" : undefined,
+        });
+      }
+      patientReviews = [...byId.values()];
+    }
+  } catch (e) {
+    sanityReadFailed("reviews.ts patientReviews", e);
+  }
+}

@@ -11,11 +11,13 @@ import { ServiceIcon, serviceSlugToIcon } from "@/components/icons/ServiceIcon";
 import { AktuellesMobilePanel, AktuellesNavMenu } from "@/components/layout/AktuellesNavMenu";
 import { ServicesMegaMenu } from "@/components/layout/ServicesMegaMenu";
 import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
+import type { ResolvedSchedule } from "@/lib/opening-hours";
 import type { AnnouncementData } from "@/lib/announcements";
 import type { Locale } from "@/i18n/routing";
 import { megaMenuCategories } from "@/content/mega-menu";
 import { images } from "@/content/site-content";
-import { serviceSlugToKey } from "@/lib/site";
+import { seoServices } from "@/content/seo-services";
+import { getEditableText } from "@/lib/editable-content";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -28,11 +30,11 @@ const navItems = [
 
 type HeaderProps = {
   announcement?: AnnouncementData | null;
+  schedule: ResolvedSchedule;
 };
 
-export function Header({ announcement = null }: HeaderProps) {
+export function Header({ announcement = null, schedule }: HeaderProps) {
   const t = useTranslations("nav");
-  const tServices = useTranslations("services");
   const locale = useLocale();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -49,7 +51,7 @@ export function Header({ announcement = null }: HeaderProps) {
   const servicesActive = pathname.includes("/leistungen");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-cream-dark/80 bg-white/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-cream-dark bg-white shadow-[0_1px_12px_rgba(8,58,64,0.12)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3">
           <Image
@@ -58,17 +60,18 @@ export function Header({ announcement = null }: HeaderProps) {
             width={48}
             height={52}
             className="h-12 w-auto"
-            priority
+            preload
+            fetchPriority="high"
           />
           <div className="hidden flex-col gap-1.5 sm:flex">
             <span className="text-xs font-medium uppercase tracking-[0.15em] text-text-muted">
               HNO · Wien 1100
             </span>
-            <ClinicOpenStatus variant="compact" surface="light" />
+            <ClinicOpenStatus variant="compact" surface="light" schedule={schedule} />
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Hauptnavigation">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-8" aria-label="Hauptnavigation">
           {navItems.slice(0, 1).map((item) => (
             <Link
               key={item.key}
@@ -78,7 +81,7 @@ export function Header({ announcement = null }: HeaderProps) {
                 isActive(item.href) ? "text-petrol" : "text-text-muted",
               )}
             >
-              {t(item.key)}
+              {getEditableText("nav", item.key, locale as "de" | "tr", t(item.key))}
             </Link>
           ))}
           <ServicesMegaMenu locale={locale} isActive={servicesActive} />
@@ -91,7 +94,7 @@ export function Header({ announcement = null }: HeaderProps) {
                 isActive(item.href) ? "text-petrol" : "text-text-muted",
               )}
             >
-              {t(item.key)}
+              {getEditableText("nav", item.key, locale as "de" | "tr", t(item.key))}
             </Link>
           ))}
           <AktuellesNavMenu locale={locale as Locale} announcement={announcement} />
@@ -104,12 +107,12 @@ export function Header({ announcement = null }: HeaderProps) {
                 isActive(item.href) ? "text-petrol" : "text-text-muted",
               )}
             >
-              {t(item.key)}
+              {getEditableText("nav", item.key, locale as "de" | "tr", t(item.key))}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 lg:gap-3">
           <Link
             href={localizedPath}
             className="rounded-full border border-cream-dark px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-petrol transition hover:border-petrol/30 hover:bg-accent-soft"
@@ -176,7 +179,7 @@ export function Header({ announcement = null }: HeaderProps) {
                         onClick={() => setOpen(false)}
                       >
                         <ServiceIcon name={category.iconKey} size={18} />
-                        {tServices(`${serviceSlugToKey[category.overviewSlug]}.title`)}
+                        {seoServices[category.overviewSlug].shortTitle[locale as "de" | "tr"]}
                       </Link>
                       {category.services.length > 0 && (
                         <ul className="pb-1">
@@ -188,7 +191,7 @@ export function Header({ announcement = null }: HeaderProps) {
                                 onClick={() => setOpen(false)}
                               >
                                 <ServiceIcon name={serviceSlugToIcon(slug)} size={16} className="opacity-70" />
-                                {tServices(`${serviceSlugToKey[slug]}.title`)}
+                                {seoServices[slug].shortTitle[locale as "de" | "tr"]}
                               </Link>
                             </li>
                           ))}
@@ -199,7 +202,7 @@ export function Header({ announcement = null }: HeaderProps) {
                   <li>
                     <Link
                       href={`/${locale}/leistungen`}
-                      className="block py-2 text-sm font-semibold text-gold"
+                      className="block py-2 text-sm font-semibold text-gold-ink"
                       onClick={() => setOpen(false)}
                     >
                       {t("servicesMenu.allServices")} →
@@ -215,12 +218,12 @@ export function Header({ announcement = null }: HeaderProps) {
                   className="block py-2.5 text-base font-medium text-text"
                   onClick={() => setOpen(false)}
                 >
-                  {t(item.key)}
+                  {getEditableText("nav", item.key, locale as "de" | "tr", t(item.key))}
                 </Link>
               </li>
             ))}
             <li>
-              <p className="py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              <p className="py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-ink">
                 {t("aktuelles")}
               </p>
               <AktuellesMobilePanel
@@ -236,7 +239,7 @@ export function Header({ announcement = null }: HeaderProps) {
                   className="block py-2.5 text-base font-medium text-text"
                   onClick={() => setOpen(false)}
                 >
-                  {t(item.key)}
+                  {getEditableText("nav", item.key, locale as "de" | "tr", t(item.key))}
                 </Link>
               </li>
             ))}

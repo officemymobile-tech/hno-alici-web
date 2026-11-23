@@ -6,12 +6,53 @@
   --color-petrol: #1a4a52;
   --color-petrol-light: #2a6570;
   --color-petrol-dark: #0f3339;
-  --color-gold: #c4a35a;
-  --color-gold-light: #d4b87a;
+  /* Accent color system — Aqua is the active default as of 2026-11-22
+     (approved color-redesign request, replacing the previous Gold
+     accent). Values and roles unchanged from the evaluated Variant B:
+     --color-gold: #35b8b0  (primary CTAs, large icons/UI on dark bg —
+       passes 5.56:1 against --color-petrol-dark, and as a button
+       background with --color-petrol-dark text, same 5.56:1)
+     --color-gold-light: #9ee3df  (text on dark/gradient backgrounds —
+       computed to clear 4.5:1 against the lightest of the 3
+       gradient-hero stops, --color-petrol-light, at 4.54:1; 6.76:1 on
+       --color-petrol, 9.34:1 on --color-petrol-dark)
+     --color-gold-ink: #1d6b66  (small text/eyebrows on light
+       backgrounds — darkened from the original #247f79 on 2026-11-22
+       after a real Lighthouse accessibility audit caught 2 on-page
+       combinations the original manual check hadn't covered: eyebrow
+       text sits on Tailwind opacity-modified backgrounds like
+       `bg-gold/15` and `bg-accent-soft/50`, which render as lighter
+       effective colors than the named --color-cream/#ffffff the
+       original value was tuned against. #1d6b66 clears 4.5:1 against
+       all of them with margin: 5.22:1 on bg-gold/15, 5.71:1 on
+       bg-accent-soft/50, 5.92:1 on --color-cream, 6.27:1 on #ffffff.
+       The base accent color itself only measures ~2.3:1 on those
+       surfaces and is never used directly for small text, by design).
+     Full before/after, screenshots and the full WCAG table:
+     docs/design/AQUA_COLOR_COMPARISON.md. These three variable NAMES
+     are kept as `--color-gold*` rather than renamed to `--color-aqua*`
+     so that none of the ~37 component files using `bg-gold`/
+     `text-gold-ink`/etc. needed to change — only the values here did. */
+  --color-gold: #35b8b0;
+  --color-gold-light: #9ee3df;
+  --color-gold-ink: #1d6b66;
   --color-text: #1c2426;
   --color-text-muted: #5a6568;
   --color-white: #ffffff;
   --color-accent-soft: #e8f2f4;
+}
+
+/* ---------------------------------------------------------------------
+   Previous Gold accent (Variant A) — kept as a documented, easily
+   restorable alternative, not deleted. To roll back, add
+   data-theme="gold" to the <html> tag in
+   src/app/[locale]/layout.tsx (the same mechanism used to preview Aqua
+   before it was approved — see docs/design/AQUA_COLOR_COMPARISON.md),
+   or swap this block's values back into :root above. */
+:root[data-theme="gold"] {
+  --color-gold: #c4a35a;
+  --color-gold-light: #d4b87a;
+  --color-gold-ink: #876c30;
 }
 
 @theme inline {
@@ -22,10 +63,11 @@
   --color-petrol-dark: var(--color-petrol-dark);
   --color-gold: var(--color-gold);
   --color-gold-light: var(--color-gold-light);
+  --color-gold-ink: var(--color-gold-ink);
   --color-text: var(--color-text);
   --color-text-muted: var(--color-text-muted);
   --color-accent-soft: var(--color-accent-soft);
-  --font-display: var(--font-cormorant);
+  --font-display: var(--font-jakarta);
   --font-body: var(--font-dm-sans);
 }
 
@@ -45,7 +87,17 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  /* Plus Jakarta Sans (2026-11-22 typography change, replaces Cormorant
+     Garamond) — sans-serif fallback stack, not the old serif one, so an
+     unloaded-font moment doesn't flash serif text in a sans-serif layout.
+     Font WEIGHT is deliberately not set here — every heading already
+     carries its own explicit font-semibold/font-bold Tailwind utility
+     class, and those live in Tailwind's `@layer utilities`, which CSS
+     cascade layers always rank below this plain (unlayered) rule
+     regardless of selector specificity — setting a weight here would
+     silently override every single one of those classes. */
+  font-family: var(--font-display), "Segoe UI", system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 @keyframes fade-up {
@@ -103,4 +155,28 @@ body {
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px -12px rgba(26, 74, 82, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-fade-up-delay {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hover-lift {
+    transition: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,101 +1,99 @@
-import Link from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
+import { Users, Stethoscope, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SiteImage } from "@/components/ui/SiteImage";
-import { StarRating } from "@/components/reviews/StarRating";
 import { images } from "@/content/site-content";
 import { doctorProfile } from "@/content/doctor-profile";
-import { getEditableImage, getEditableText } from "@/lib/editable-content";
-import { reviewPlatforms } from "@/content/reviews";
+import { getEditableImage, getEditableImagePosition, getEditableText } from "@/lib/editable-content";
 import { siteConfig } from "@/lib/site";
 
 export async function Hero() {
   const t = await getTranslations("hero");
-  const tAcute = await getTranslations("acute");
   const locale = await getLocale();
   const lang = locale as "de" | "tr";
-  const heroImage = getEditableImage("ordinationHero", images.ordinationHero);
   const portrait = getEditableImage("drAliciPortrait", doctorProfile.portrait);
+  const portraitPosition = getEditableImagePosition("drAliciPortrait") ?? doctorProfile.portraitPosition;
+
+  const badges = [
+    { Icon: Users, label: getEditableText("heroBadges", "family", lang, t("badges.family")) },
+    { Icon: Stethoscope, label: getEditableText("heroBadges", "diagnostics", lang, t("badges.diagnostics")) },
+    { Icon: ShieldCheck, label: getEditableText("heroBadges", "trust", lang, t("badges.trust")) },
+  ];
 
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-petrol-dark">
-      <div className="absolute inset-0">
+    <section className="relative overflow-hidden bg-petrol-dark">
+      {/* Mobile: a shorter photo band above the text — no large side-bleed room at this width. */}
+      <div className="relative aspect-[16/10] w-full lg:hidden">
         <SiteImage
-          src={heroImage}
-          alt="HNO Ordination Wien"
+          src={portrait}
+          alt="Dr. Ümit Alici – HNO Facharzt Wien"
           fill
-          priority
-          className="object-cover opacity-40"
+          preload
+          fetchPriority="high"
+          className="object-cover object-top"
+          objectPosition={portraitPosition}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-petrol-dark/95 via-petrol/85 to-petrol/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-petrol-dark via-petrol-dark/10 to-transparent" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[90vh] max-w-7xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <div>
-          <p className="mb-2 inline-block rounded-full bg-gold/20 px-4 py-1 text-sm font-semibold text-gold">
-            {tAcute("subtitle")}
-          </p>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+      <div className="relative mx-auto grid max-w-[1600px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
+        <div className="relative z-10 flex flex-col justify-center px-4 py-14 sm:px-6 lg:px-16 lg:py-28 xl:px-24">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-gold">
             {getEditableText("hero", "eyebrow", lang, t("eyebrow"))}
           </p>
-          <h1 className="font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl xl:text-[4rem]">
             {getEditableText("hero", "title", lang, t("title"))}
           </h1>
-          <p className="mt-4 text-xl text-white/90">
+          <p className="mt-6 max-w-xl text-2xl font-medium leading-snug text-white/90">
             {getEditableText("hero", "subtitle", lang, t("subtitle"))}
           </p>
-          <p className="mt-2 text-lg text-white/70">
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">
             {getEditableText("hero", "tagline", lang, doctorProfile.tagline[lang])}
           </p>
 
-          <Link
-            href={reviewPlatforms.google.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-3 rounded-full bg-white/10 px-4 py-2 backdrop-blur transition hover:bg-white/20"
-          >
-            <StarRating rating={reviewPlatforms.google.rating} size="sm" />
-            <span className="text-sm text-white/90">Google · {reviewPlatforms.google.reviewCount}+</span>
-          </Link>
-
-          {/* A/B: Telefon (primary) vs Online (secondary) */}
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="mt-12 flex flex-wrap items-center gap-4">
             <a
               href={`tel:${siteConfig.phone}`}
               data-cta="hero-phone"
-              className="flex flex-col items-center rounded-2xl bg-gold px-6 py-5 text-center shadow-xl shadow-gold/25 transition hover:bg-gold-light"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-lg font-bold text-petrol-dark shadow-xl shadow-gold/25 transition hover:-translate-y-0.5 hover:bg-gold-light"
             >
-              <span className="text-xs font-bold uppercase tracking-widest text-petrol-dark/70">
-                {lang === "tr" ? "Önerilen" : "Empfohlen"}
-              </span>
-              <span className="mt-1 text-lg font-bold text-petrol-dark">{t("ctaAppointment")}</span>
-              <span className="mt-1 text-sm text-petrol-dark/80">{siteConfig.phoneDisplay}</span>
+              {getEditableText("hero", "ctaAppointment", lang, t("ctaAppointment"))}
             </a>
             <Button
               href={`/${locale}/termin`}
               variant="outline"
               size="lg"
-              className="h-full min-h-[88px] flex-col gap-1 border-white/40 py-5"
+              className="border-2 border-white/50 px-8 py-4 text-lg font-semibold"
               data-cta="hero-online"
             >
-              <span className="text-xs uppercase tracking-widest opacity-70">Online</span>
-              <span>{lang === "tr" ? "Form ile randevu" : "Anfrage senden"}</span>
+              {siteConfig.phoneDisplay}
             </Button>
+          </div>
+
+          <div className="mt-14 flex flex-wrap gap-x-10 gap-y-4">
+            {badges.map(({ Icon, label }) => (
+              <div key={label} className="flex items-center gap-2.5 text-base font-medium text-white/85">
+                <Icon className="h-6 w-6 text-gold" strokeWidth={1.5} aria-hidden />
+                {label}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl ring-4 ring-gold/30">
-            <SiteImage
-              src={portrait}
-              alt="Dr. Ümit Alici – HNO Facharzt Wien"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 80vw, 400px"
-            />
-          </div>
+        {/* Desktop: large side-bleed photo, no card frame — matches the reference's full-bleed hero photo. */}
+        <div className="relative hidden min-h-[720px] lg:block">
+          <SiteImage
+            src={portrait}
+            alt="Dr. Ümit Alici – HNO Facharzt Wien"
+            fill
+            preload
+            fetchPriority="high"
+            className="object-cover"
+            objectPosition={portraitPosition}
+            sizes="50vw"
+          />
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-petrol-dark to-transparent" />
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ export async function InsuranceLogos({ compact }: { compact?: boolean }) {
     <section className={compact ? "py-8" : "py-16"} aria-label={lang === "tr" ? "Sigorta kurumları" : "Krankenkassen"}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {!compact && (
-          <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-gold">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-gold-ink">
             {lang === "tr" ? "Sigorta anlaşmaları" : "Krankenkassen"}
           </p>
         )}

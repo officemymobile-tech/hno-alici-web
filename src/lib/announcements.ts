@@ -1,5 +1,7 @@
 import raw from "@/content/announcements.json";
 import type { Locale } from "@/i18n/routing";
+import { isSanityContentEnabled, sanityReadFailed } from "./content-source";
+import { fetchActiveAnnouncement } from "./sanity/queries";
 
 export type AnnouncementVariant = "info" | "warning" | "urgent";
 
@@ -16,7 +18,23 @@ export interface AnnouncementData {
   updatedAt: string;
 }
 
-const data = raw as AnnouncementData;
+const localData = raw as AnnouncementData;
+
+// Resolved once at build time — see editable-content.ts for the pattern and
+// rationale (plan Section 4.3 / binding condition 3). `null` here just means
+// "no Sanity announcement document is currently active," which is different
+// from "Sanity is unreachable" (that's the catch block, which falls back to
+// the local file instead).
+let data: AnnouncementData = localData;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchActiveAnnouncement();
+    if (overlay) data = overlay;
+    else data = { ...localData, active: false };
+  } catch (e) {
+    sanityReadFailed("announcements", e);
+  }
+}
 
 function isStillValid(validUntil: string | null): boolean {
   if (!validUntil) return true;
@@ -33,9 +51,5 @@ function hasContent(locale: Locale, announcement: AnnouncementData): boolean {
 export function getActiveAnnouncement(locale: Locale): AnnouncementData | null {
   if (!data.active || !isStillValid(data.validUntil)) return null;
   if (!hasContent(locale, data)) return null;
-  return data;
-}
-
-export function getAnnouncementForAdmin(): AnnouncementData {
   return data;
 }

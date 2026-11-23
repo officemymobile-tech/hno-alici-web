@@ -12,6 +12,17 @@
 
 # testing
 /coverage
+/test-results
+/playwright-report
+
+# local backups and pre-existing unrelated static export — never part of the
+# Next.js source, regenerate/restore from git history or the external backup
+# at ../hno-alici-web-backups instead
+/backups
+/dist
+
+# Sanity CLI local runtime cache
+/.sanity
 
 # next.js
 /.next/
@@ -19,6 +30,9 @@
 
 # production
 /build
+
+# standalone Sanity Studio deploy output (regenerate with: npx sanity build studio-only-build)
+/studio-only-build
 
 # misc
 .DS_Store

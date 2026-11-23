@@ -1,9 +1,22 @@
 import { images } from "./site-content";
 import type { ServiceSlug } from "@/lib/site";
+import { isSanityContentEnabled, sanityReadFailed } from "@/lib/content-source";
+import { fetchServices } from "@/lib/sanity/queries";
 
 export type SeoServiceContent = {
   slug: ServiceSlug;
   h1: { de: string; tr: string };
+  // Bare service name (no location suffix) for nav/menu/card titles — `h1`
+  // includes "Wien 1100" and is meant for the detail page only. Pre-seeded
+  // with the exact text already live in messages.services.*.title.
+  shortTitle: { de: string; tr: string };
+  // Short card blurb for the homepage preview and the Leistungen mega-menu —
+  // deliberately shorter than `intro` (the detail page's opening paragraph).
+  // Pre-seeded with the exact text that was already live in
+  // messages/{de,tr}.json's services.* keys (not invented) so switching
+  // ServicesPreview/ServicesMegaMenu/the overview grid to read this field
+  // instead doesn't change a single visible word.
+  cardText: { de: string; tr: string };
   metaTitle: { de: string; tr: string };
   metaDescription: { de: string; tr: string };
   keywords: { de: string[]; tr: string[] };
@@ -12,13 +25,19 @@ export type SeoServiceContent = {
   treatments: { de: string[]; tr: string[] };
   faq: { q: { de: string; tr: string }; a: { de: string; tr: string } }[];
   image: string;
+  imagePosition?: string;
 };
 
-export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
+const localSeoServices: Record<ServiceSlug, SeoServiceContent> = {
   "allgemeine-hno": {
     slug: "allgemeine-hno",
     h1: { de: "Allgemeine HNO Wien 1100", tr: "Genel KBB Wien 1100" },
-    metaTitle: { de: "Allgemeine HNO Wien Favoriten | Dr. Ümit Alici", tr: "Genel KBB Wien Favoriten | Dr. Ümit Alici" },
+    shortTitle: { de: "Allgemeine HNO", tr: "Genel KBB" },
+    cardText: {
+      de: "Diagnostik und Behandlung von Erkrankungen der Nase, der Ohren und des Halses – von Infekten bis zu chronischen Beschwerden.",
+      tr: "Burun, kulak ve boğaz hastalıklarının teşhisi ve tedavisi – enfeksiyonlardan kronik şikayetlere kadar.",
+    },
+    metaTitle: { de: "Allgemeine HNO Wien Favoriten", tr: "Genel KBB Wien Favoriten" },
     metaDescription: {
       de: "Allgemeine HNO-Untersuchungen in Wien 1100: Ohren, Nase, Hals, Hörtest, Schwindel. Alle Kassen. Akuttermine möglich.",
       tr: "Wien 1100'de genel KBB muayeneleri: kulak, burun, boğaz, işitme testi. Tüm sigortalar. Acil randevular.",
@@ -44,7 +63,12 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   "kinder-hno": {
     slug: "kinder-hno",
     h1: { de: "Kinder HNO Wien 1100", tr: "Çocuk KBB Wien 1100" },
-    metaTitle: { de: "Kinder HNO Wien Favoriten | Dr. Ümit Alici", tr: "Çocuk KBB Wien Favoriten | Dr. Ümit Alici" },
+    shortTitle: { de: "Kinder-HNO", tr: "Çocuk KBB" },
+    cardText: {
+      de: "Spezialisierte Versorgung für Kinder: Ohrenschmerzen, Polypen, Hörprobleme und wiederkehrende Infekte – einfühlsam und altersgerecht.",
+      tr: "Çocuklar için özel bakım: kulak ağrısı, polip, işitme sorunları ve tekrarlayan enfeksiyonlar – nazik ve yaşa uygun.",
+    },
+    metaTitle: { de: "Kinder HNO Wien Favoriten", tr: "Çocuk KBB Wien Favoriten" },
     metaDescription: {
       de: "Kinder-HNO in Wien 1100: Ohrenschmerzen, Hörprobleme, Schnupfen. Einfühlsame Betreuung. Termin am gleichen Tag bei Akutfällen.",
       tr: "Wien 1100 çocuk KBB: kulak ağrısı, işitme sorunları. Nazik bakım. Acil durumlarda aynı gün randevu.",
@@ -70,7 +94,12 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   allergologie: {
     slug: "allergologie",
     h1: { de: "Allergietest Wien", tr: "Alerji testi Wien" },
-    metaTitle: { de: "Allergietest Wien 1100 | HNO Alici", tr: "Alerji testi Wien 1100 | HNO Alici" },
+    shortTitle: { de: "Allergologie", tr: "Alerji" },
+    cardText: {
+      de: "Abklärung und Behandlung allergischer Beschwerden der oberen Atemwege – für mehr Lebensqualität im Alltag.",
+      tr: "Üst solunum yolu alerjik şikayetlerinin araştırılması ve tedavisi – günlük yaşam kalitesi için.",
+    },
+    metaTitle: { de: "Allergietest Wien 1100", tr: "Alerji testi Wien 1100" },
     metaDescription: {
       de: "Allergieabklärung in Wien Favoriten: Pricktest, Blutuntersuchung, Immuntherapie. HNO-Facharzt Dr. Ümit Alici.",
       tr: "Wien Favoriten'de alerji araştırması: prick testi, kan testi, immünoterapi.",
@@ -94,6 +123,11 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   hoertest: {
     slug: "hoertest",
     h1: { de: "Hörtest Wien", tr: "İşitme testi Wien" },
+    shortTitle: { de: "Hörtest", tr: "İşitme testi" },
+    cardText: {
+      de: "Hörprüfungen und Abklärung von Hörverlust, Tinnitus und anderen Hörstörungen.",
+      tr: "İşitme testleri ve işitme kaybı, tinnitus ve diğer işitme bozukluklarının araştırılması.",
+    },
     metaTitle: { de: "Hörtest & Hörmessung Wien 1100", tr: "İşitme testi Wien 1100" },
     metaDescription: { de: "Hörtest und Audiometrie in Wien Favoriten. Hörverlust, Tinnitus Abklärung.", tr: "Wien Favoriten'de işitme testi ve odyometri." },
     keywords: { de: ["Hörtest Wien", "Hörmessung Wien"], tr: ["İşitme testi Wien"] },
@@ -106,7 +140,12 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   schwindel: {
     slug: "schwindel",
     h1: { de: "Schwindel Abklärung Wien", tr: "Baş dönmesi araştırması Wien" },
-    metaTitle: { de: "Schwindel Wien 1100 | HNO Facharzt", tr: "Baş dönmesi Wien 1100 | KBB uzmanı" },
+    shortTitle: { de: "Schwindel", tr: "Baş dönmesi" },
+    cardText: {
+      de: "Diagnostik von Schwindel und Gleichgewichtsstörungen mit gezielter HNO-Abklärung.",
+      tr: "Baş dönmesi ve denge bozukluklarının hedefli KBB araştırması.",
+    },
+    metaTitle: { de: "Schwindel Wien 1100", tr: "Baş dönmesi Wien 1100" },
     metaDescription: { de: "Schwindel und Gleichgewichtsstörungen – HNO-Abklärung in Wien Favoriten.", tr: "Baş dönmesi ve denge bozuklukları – KBB araştırması Wien Favoriten." },
     keywords: { de: ["Schwindel Wien", "Schwindel Arzt Wien"], tr: ["Baş dönmesi Wien"] },
     intro: { de: "Schwindel hat viele Ursachen – wir klären HNO-relevante Formen gezielt ab.", tr: "Baş dönmesinin birçok nedeni vardır – KBB ile ilgili formları hedefli araştırıyoruz." },
@@ -118,7 +157,12 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   schnarchen: {
     slug: "schnarchen",
     h1: { de: "Schnarchen Behandlung Wien", tr: "Horlama tedavisi Wien" },
-    metaTitle: { de: "Schnarchen Wien 1100 | HNO Alici", tr: "Horlama Wien 1100 | HNO Alici" },
+    shortTitle: { de: "Schnarchen", tr: "Horlama" },
+    cardText: {
+      de: "Abklärung und Behandlung von Schnarchen und schlafbezogenen Atemproblemen.",
+      tr: "Horlama ve uykuyla ilgili solunum sorunlarının araştırılması ve tedavisi.",
+    },
+    metaTitle: { de: "Schnarchen Wien 1100", tr: "Horlama Wien 1100" },
     metaDescription: { de: "Schnarchen und schlafbezogene Atemprobleme – Abklärung beim HNO-Facharzt.", tr: "Horlama ve uyku solunum sorunları – KBB uzmanında araştırma." },
     keywords: { de: ["Schnarchen Wien", "Schnarchen Arzt Wien"], tr: ["Horlama tedavisi Wien"] },
     intro: { de: "Schnarchen beeinträchtigt die Lebensqualität – wir finden die Ursache und empfehlen die passende Therapie.", tr: "Horlama yaşam kalitesini etkiler – nedeni bulur ve uygun tedaviyi öneririz." },
@@ -130,6 +174,11 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
   stimmstoerungen: {
     slug: "stimmstoerungen",
     h1: { de: "Stimmstörungen Wien", tr: "Ses bozuklukları Wien" },
+    shortTitle: { de: "Stimmstörungen", tr: "Ses bozuklukları" },
+    cardText: {
+      de: "Untersuchung und Therapie von Heiserkeit und funktionellen Stimmproblemen.",
+      tr: "Ses kısıklığı ve fonksiyonel ses sorunlarının muayenesi ve tedavisi.",
+    },
     metaTitle: { de: "Stimmstörungen & Heiserkeit Wien 1100", tr: "Ses bozuklukları Wien 1100" },
     metaDescription: { de: "Heiserkeit und Stimmprobleme – Diagnostik und Therapie beim HNO-Facharzt.", tr: "Ses kısıklığı ve ses sorunları – KBB uzmanında teşhis ve tedavi." },
     keywords: { de: ["Stimmstörungen Wien", "Heiserkeit Arzt Wien"], tr: ["Ses bozuklukları Wien"] },
@@ -140,3 +189,38 @@ export const seoServices: Record<ServiceSlug, SeoServiceContent> = {
     image: images.drAliciPortrait,
   },
 };
+
+// Resolved once at build time, merged per-slug (not wholesale replaced) so a
+// Sanity service document only overrides the fields it actually sets, same
+// merge discipline as editable-content.ts's texts overlay.
+export let seoServices: Record<ServiceSlug, SeoServiceContent> = localSeoServices;
+if (isSanityContentEnabled()) {
+  try {
+    const overlay = await fetchServices();
+    if (!overlay.length) {
+      sanityReadFailed("seo-services (fetchServices returned 0 documents)", new Error("expected 7 service documents"));
+    }
+    const merged = { ...localSeoServices };
+    for (const s of overlay) {
+      const slug = s.slug as ServiceSlug;
+      if (slug in merged) {
+        merged[slug] = {
+          ...merged[slug],
+          ...s,
+          // `shortTitle`/`cardText` are optional on the overlay (undefined
+          // when not yet set in Sanity) — a blind spread would otherwise
+          // overwrite the real local values with `undefined` the moment
+          // Sanity mode is enabled, before any editor has touched these
+          // 2 new fields.
+          shortTitle: s.shortTitle ?? merged[slug].shortTitle,
+          cardText: s.cardText ?? merged[slug].cardText,
+          imagePosition: s.imagePosition ?? merged[slug].imagePosition,
+          slug,
+        };
+      }
+    }
+    seoServices = merged;
+  } catch (e) {
+    sanityReadFailed("seo-services", e);
+  }
+}

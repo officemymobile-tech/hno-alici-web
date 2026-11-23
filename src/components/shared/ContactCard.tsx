@@ -11,12 +11,12 @@ export async function ContactCard() {
       <address className="mt-6 space-y-3 not-italic text-white/85">
         <p>{t("address")}</p>
         <p>
-          <a href={`tel:${siteConfig.phone}`} className="hover:text-gold">
+          <a href={`tel:${siteConfig.phone}`} className="hover:text-gold-light">
             {t("phone")}
           </a>
         </p>
         <p>
-          <a href={`mailto:${siteConfig.email}`} className="hover:text-gold">
+          <a href={`mailto:${siteConfig.email}`} className="hover:text-gold-light">
             {t("email")}
           </a>
         </p>

@@ -1,11 +1,25 @@
+import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ReviewsSection } from "@/components/reviews/ReviewsSection";
 import { GoogleMapEmbed, MapDirectionsPanel } from "@/components/maps/GoogleMapEmbed";
 import { Button } from "@/components/ui/Button";
 import { reviewPlatforms } from "@/content/reviews";
+import { getPageSeo } from "@/lib/page-seo";
+import { getEditableText } from "@/lib/editable-content";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const lang = locale as "de" | "tr";
+  const t = await getTranslations({ locale, namespace: "reviews" });
+  const { title, description } = await getPageSeo("bewertungen", lang, {
+    title: t("title"),
+    description: t("subtitle"),
+  });
+  return { title, description };
+}
 
 export default async function ReviewsPage({ params }: Props) {
   const { locale } = await params;
@@ -15,12 +29,17 @@ export default async function ReviewsPage({ params }: Props) {
 
   return (
     <>
-      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+      <PageHeader
+        title={getEditableText("reviews", "title", lang, t("title"))}
+        subtitle={getEditableText("reviews", "subtitle", lang, t("subtitle"))}
+      />
       <ReviewsSection />
 
       <section className="bg-accent-soft/40 py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="font-display text-2xl font-semibold text-petrol">{t("cta")}</p>
+          <p className="font-display text-2xl font-semibold text-petrol">
+            {getEditableText("reviews", "cta", lang, t("cta"))}
+          </p>
           <Button
             href={reviewPlatforms.google.writeReviewUrl}
             variant="primary"
@@ -28,7 +47,7 @@ export default async function ReviewsPage({ params }: Props) {
             external
             className="mt-8"
           >
-            {t("writeReview")}
+            {getEditableText("reviews", "writeReview", lang, t("writeReview"))}
           </Button>
         </div>
       </section>

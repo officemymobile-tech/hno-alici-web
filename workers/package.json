@@ -1,0 +1,8 @@
+{
+  "name": "hno-alici-workers",
+  "private": true,
+  "description": "Dependencies for Cloudflare Workers in this repo that need npm packages bundled (announcement-api.js has none and needs none of this; sanity-rebuild-webhook.js uses @sanity/webhook for HMAC signature verification — hand-rolling that is security-sensitive code better left to the maintained package).",
+  "dependencies": {
+    "@sanity/webhook": "4.0.4"
+  }
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "tag": "P",
+    "text": "Patientenstimmen",
+    "top": 630,
+    "bottom": 650,
+    "left": 112,
+    "right": 680
+  },
+  {
+    "tag": "H2",
+    "text": "Bewertungen",
+    "top": 662,
+    "bottom": 722,
+    "left": 112,
+    "right": 680
+  },
+  {
+    "tag": "P",
+    "text": "Das sagen unsere Patienten auf",
+    "top": 738,
+    "bottom": 766,
+    "left": 112,
+    "right": 680
+  },
+  {
+    "tag": "P",
+    "text": "Google",
+    "top": 826,
+    "bottom": 846,
+    "left": 200,
+    "right": 652
+  },
+  {
+    "tag": "SPAN",
+    "text": "4.0",
+    "top": 850,
+    "bottom": 886,
+    "left": 200,
+    "right": 234
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 862,
+    "bottom": 882,
+    "left": 242,
+    "right": 254
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 862,
+    "bottom": 882,
+    "left": 256,
+    "right": 267
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 862,
+    "bottom": 882,
+    "left": 269,
+    "right": 281
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 862,
+    "bottom": 882,
+    "left": 283,
+    "right": 295
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 862,
+    "bottom": 882,
+    "left": 297,
+    "right": 308
+  },
+  {
+    "tag": "P",
+    "text": "70+ Bewertungen",
+    "top": 890,
+    "bottom": 910,
+    "left": 200,
+    "right": 652
+  },
+  {
+    "tag": "STRONG",
+    "text": "4.2",
+    "top": 955,
+    "bottom": 973,
+    "left": 182,
+    "right": 203
+  },
+  {
+    "tag": "SPAN",
+    "text": "·",
+    "top": 954,
+    "bottom": 974,
+    "left": 246,
+    "right": 249
+  },
+  {
+    "tag": "STRONG",
+    "text": "4.9",
+    "top": 955,
+    "bottom": 973,
+    "left": 311,
+    "right": 332
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 1034,
+    "bottom": 1054,
+    "left": 140,
+    "right": 152
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 1034,
+    "bottom": 1054,
+    "left": 154,
+    "right": 165
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 1034,
+    "bottom": 1054,
+    "left": 167,
+    "right": 179
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 1034,
+    "bottom": 1054,
+    "left": 181,
+    "right": 193
+  },
+  {
+    "tag": "SPAN",
+    "text": "★",
+    "top": 1034,
+    "bottom": 1054,
+    "left": 195,
+    "right": 206
+  },
+  {
+    "tag": "BLOCKQUOTE",
+    "text": "„Das Telefon hat nur einmal ge",
+    "top": 1070,
+    "bottom": 1216,
+    "left": 140,
+    "right": 652
+  },
+  {
+    "tag": "FIGCAPTION",
+    "text": "— DocFinder Patient",
+    "top": 1232,
+    "bottom": 1252,
+    "left": 140,
+    "right": 652
+  },
+  {
+    "tag": "A",
+    "text": "Alle Bewertungen",
+    "top": 1312,
+    "bottom": 1360,
+    "left": 112,
+    "right": 291
+  },
+  {
+    "tag": "A",
+    "text": "Auf Google bewerten",
+    "top": 1312,
+    "bottom": 1360,
+    "left": 307,
+    "right": 514
+  },
+  {
+    "tag": "H2",
+    "text": "Warum Patienten Dr. Alici wähl",
+    "top": 630,
+    "bottom": 750,
+    "left": 760,
+    "right": 1328
+  },
+  {
+    "tag": "H3",
+    "text": "Erfahrener HNO-Facharzt",
+    "top": 862,
+    "bottom": 890,
+    "left": 760,
+    "right": 969
+  },
+  {
+    "tag": "P",
+    "text": "Umfassende Diagnostik und Beha",
+    "top": 898,
+    "bottom": 976,
+    "left": 760,
+    "right": 1024
+  },
+  {
+    "tag": "H3",
+    "text": "Spezialist für Kinder-HNO",
+    "top": 862,
+    "bottom": 890,
+    "left": 1064,
+    "right": 1278
+  },
+  {
+    "tag": "P",
+    "text": "Sanfte, kindgerechte Untersuch",
+    "top": 898,
+    "bottom": 976,
+    "left": 1064,
+    "right": 1328
+  },
+  {
+    "tag": "H3",
+    "text": "Türkischsprachige Betreuung",
+    "top": 1088,
+    "bottom": 1116,
+    "left": 760,
+    "right": 990
+  },
+  {
+    "tag": "P",
+    "text": "Beratung und Behandlung auf De",
+    "top": 1124,
+    "bottom": 1202,
+    "left": 760,
+    "right": 1024
+  },
+  {
+    "tag": "H3",
+    "text": "Alle Kassen & privat",
+    "top": 1088,
+    "bottom": 1116,
+    "left": 1064,
+    "right": 1226
+  },
+  {
+    "tag": "P",
+    "text": "Ordination mit Kassenzulassung",
+    "top": 1124,
+    "bottom": 1202,
+    "left": 1064,
+    "right": 1328
+  }
+]

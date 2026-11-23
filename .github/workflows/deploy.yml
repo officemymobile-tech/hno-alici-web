@@ -4,6 +4,14 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Sanity content publish -> hno-alici-sanity-rebuild Worker (verifies the
+  # Sanity webhook's HMAC signature, see workers/sanity-rebuild-webhook.js) ->
+  # this dispatch. NOT YET WIRED UP: the Worker isn't deployed and no webhook
+  # is configured in Sanity's dashboard yet (see
+  # docs/migration/github-actions-webhook-plan.md) — this trigger block is
+  # harmless to merge ahead of that, since nothing calls it until then.
+  repository_dispatch:
+    types: [sanity-content-published]
 
 permissions:
   contents: read
@@ -27,6 +35,23 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          # Flips the build onto Sanity content (see src/lib/content-source.ts).
+          # NOT YET ACTIVE: these 4 secrets don't exist in this repo yet (see
+          # docs/migration/github-actions-webhook-plan.md) — until they're
+          # created, CONTENT_SOURCE=sanity is set but SANITY_API_TOKEN etc.
+          # resolve empty, and every content loader's try/catch falls back to
+          # the local JSON content exactly as today (verified locally:
+          # `CONTENT_SOURCE=sanity npm run build` with no valid token still
+          # builds all routes cleanly). Flipping this live is the single most
+          # consequential step in the whole migration — needs its own
+          # separate, explicit go-ahead per binding condition, not implied by
+          # this file existing.
+          CONTENT_SOURCE: sanity
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SANITY_API_VERSION: ${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }}
+          SANITY_API_TOKEN: ${{ secrets.SANITY_API_TOKEN }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -46,7 +46,7 @@ export function SeoLandingTemplate({ data, lang, locale, serviceLink }: Props) {
             <ul className="mt-8 space-y-4">
               {data.benefits[lang].map((b) => (
                 <li key={b} className="flex gap-3 text-text-muted">
-                  <span className="text-gold">✓</span>
+                  <span className="text-gold-ink">✓</span>
                   {b}
                 </li>
               ))}

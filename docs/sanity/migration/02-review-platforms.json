@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "reviewPlatform.google",
+    "_type": "reviewPlatform",
+    "name": "Google",
+    "rating": 4.0,
+    "maxRating": 5,
+    "reviewCount": 70,
+    "url": "https://www.google.com/maps/search/?api=1&query=HNO+Alici+Senefeldergasse+3+1100+Wien",
+    "writeReviewUrl": "https://www.google.com/maps/search/?api=1&query=HNO+Alici+Senefeldergasse+3+1100+Wien"
+  },
+  {
+    "_id": "reviewPlatform.docfinder",
+    "_type": "reviewPlatform",
+    "name": "DocFinder",
+    "rating": 4.2,
+    "maxRating": 5,
+    "reviewCount": 13,
+    "url": "https://www.docfinder.at/hno-arzt/1100-wien/dr-uemit-alici/bewertungen"
+  },
+  {
+    "_id": "reviewPlatform.herold",
+    "_type": "reviewPlatform",
+    "name": "Herold",
+    "rating": 4.9,
+    "maxRating": 5,
+    "reviewCount": 2,
+    "url": "https://www.herold.at/gelbe-seiten/wien/Gz9LR/dr-alici-uemit/"
+  }
+]

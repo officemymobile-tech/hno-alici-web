@@ -1,0 +1,122 @@
+[
+  {
+    "_id": "announcement.default",
+    "_type": "announcement"
+  },
+  {
+    "_id": "blogPost.allergietest-wien",
+    "_type": "blogPost"
+  },
+  {
+    "_id": "blogPost.ohrenschmerzen-kind-wien",
+    "_type": "blogPost"
+  },
+  {
+    "_id": "doctor.dr-uemit-alici",
+    "_type": "doctor"
+  },
+  {
+    "_id": "legalDocument.cookies.de",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.cookies.tr",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.haftung.de",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.haftung.tr",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.impressum.de",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.impressum.tr",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.privacy.de",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "legalDocument.privacy.tr",
+    "_type": "legalDocument"
+  },
+  {
+    "_id": "openingHours",
+    "_type": "openingHours"
+  },
+  {
+    "_id": "service.allergologie",
+    "_type": "service"
+  },
+  {
+    "_id": "service.allgemeine-hno",
+    "_type": "service"
+  },
+  {
+    "_id": "service.hoertest",
+    "_type": "service"
+  },
+  {
+    "_id": "service.kinder-hno",
+    "_type": "service"
+  },
+  {
+    "_id": "service.schnarchen",
+    "_type": "service"
+  },
+  {
+    "_id": "service.schwindel",
+    "_type": "service"
+  },
+  {
+    "_id": "service.stimmstoerungen",
+    "_type": "service"
+  },
+  {
+    "_id": "siteSettings",
+    "_type": "siteSettings"
+  },
+  {
+    "_id": "staffMember.frau-aya-halabia",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-hatice-yildizdal",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-marielle-bahome",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-melike-arslan",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-melissa-baran",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-naila-memic",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-ruzica-tadic",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.frau-yaren-sertelli",
+    "_type": "staffMember"
+  },
+  {
+    "_id": "staffMember.herr-david-kanji-zach-kiesling",
+    "_type": "staffMember"
+  }
+]

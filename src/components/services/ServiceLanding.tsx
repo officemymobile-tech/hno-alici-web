@@ -1,8 +1,12 @@
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { ArrowRight } from "lucide-react";
 import { SiteImage } from "@/components/ui/SiteImage";
 import { Button } from "@/components/ui/Button";
 import { InsuranceLogos } from "@/components/shared/InsuranceLogos";
 import type { SeoServiceContent } from "@/content/seo-services";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, serviceSlugs, serviceSlugToKey } from "@/lib/site";
+import { getEditableText } from "@/lib/editable-content";
 
 type Props = {
   content: SeoServiceContent;
@@ -10,7 +14,10 @@ type Props = {
   locale: string;
 };
 
-export function ServiceLanding({ content, lang, locale }: Props) {
+export async function ServiceLanding({ content, lang, locale }: Props) {
+  const t = await getTranslations("services");
+  const otherSlugs = serviceSlugs.filter((s) => s !== content.slug).slice(0, 3);
+
   return (
     <>
       <section className="gradient-hero px-4 py-16 sm:px-6 lg:px-8">
@@ -23,26 +30,33 @@ export function ServiceLanding({ content, lang, locale }: Props) {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
-            <SiteImage src={content.image} alt={content.h1[lang]} fill className="object-cover" sizes="50vw" />
+            <SiteImage
+              src={content.image}
+              alt={content.h1[lang]}
+              fill
+              className="object-cover"
+              objectPosition={content.imagePosition}
+              sizes="50vw"
+            />
           </div>
           <div className="space-y-8">
             <div>
               <h2 className="font-display text-2xl font-semibold text-petrol">
-                {lang === "tr" ? "Belirtiler" : "Symptome"}
+                {getEditableText("serviceLanding", "symptomsHeading", lang, lang === "tr" ? "Belirtiler" : "Symptome")}
               </h2>
               <ul className="mt-4 space-y-2">
                 {content.symptoms[lang].map((s) => (
-                  <li key={s} className="flex gap-2 text-text-muted"><span className="text-gold">•</span>{s}</li>
+                  <li key={s} className="flex gap-2 text-text-muted"><span className="text-gold-ink">•</span>{s}</li>
                 ))}
               </ul>
             </div>
             <div>
               <h2 className="font-display text-2xl font-semibold text-petrol">
-                {lang === "tr" ? "Tedaviler" : "Behandlungen"}
+                {getEditableText("serviceLanding", "treatmentsHeading", lang, lang === "tr" ? "Tedaviler" : "Behandlungen")}
               </h2>
               <ul className="mt-4 space-y-2">
                 {content.treatments[lang].map((t) => (
-                  <li key={t} className="flex gap-2 text-text-muted"><span className="text-gold">✓</span>{t}</li>
+                  <li key={t} className="flex gap-2 text-text-muted"><span className="text-gold-ink">✓</span>{t}</li>
                 ))}
               </ul>
             </div>
@@ -70,6 +84,30 @@ export function ServiceLanding({ content, lang, locale }: Props) {
           <Button href={`/${locale}/termin`} variant="secondary" size="lg" data-cta="service-online">
             {lang === "tr" ? "Randevu" : "Termin anfragen"}
           </Button>
+        </div>
+
+        <div className="mt-16 border-t border-cream-dark pt-10">
+          <h2 className="font-display text-xl font-semibold text-petrol">
+            {getEditableText("serviceLanding", "otherServicesHeading", lang, lang === "tr" ? "Diğer hizmetlerimiz" : "Weitere Leistungen")}
+          </h2>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {otherSlugs.map((slug) => (
+              <Link
+                key={slug}
+                href={`/${locale}/leistungen/${slug}`}
+                className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-5 py-2.5 text-sm font-medium text-petrol transition hover:bg-petrol hover:text-white"
+              >
+                {t(`${serviceSlugToKey[slug]}.title`)}
+                <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
+              </Link>
+            ))}
+          </div>
+          <Link
+            href={`/${locale}/leistungen`}
+            className="mt-5 inline-block text-sm font-semibold uppercase tracking-widest text-gold-ink hover:text-petrol"
+          >
+            {lang === "tr" ? "Tüm hizmetler" : "Alle Leistungen"} →
+          </Link>
         </div>
       </div>
       <InsuranceLogos compact />

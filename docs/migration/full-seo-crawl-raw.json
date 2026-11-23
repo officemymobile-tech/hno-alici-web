@@ -1,0 +1,1034 @@
+{
+  "pages": [
+    {
+      "path": "/de/",
+      "status": 200,
+      "title": "Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 35,
+      "metaDescLen": 140,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Dr. Ümit Alici",
+      "h2count": 11,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic",
+        "FAQPage"
+      ],
+      "internalLinks": 18,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/team/",
+      "status": 200,
+      "title": "Team | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 42,
+      "metaDescLen": 148,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Team",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/dr-uemit-alici/",
+      "status": 200,
+      "title": "Ihr Ansprechpartner für HNO in Wien | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 73,
+      "metaDescLen": 155,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Dr. Ümit Alici",
+      "h2count": 5,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 18,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/dr-uemit-alici/lebenslauf/",
+      "status": 200,
+      "title": "Lebenslauf | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 48,
+      "metaDescLen": 134,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Lebenslauf",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/dr-uemit-alici/qualifikationen/",
+      "status": 200,
+      "title": "Qualifikationen | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 53,
+      "metaDescLen": 143,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Qualifikationen",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/dr-uemit-alici/philosophie/",
+      "status": 200,
+      "title": "Philosophie | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 49,
+      "metaDescLen": 155,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Philosophie",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/",
+      "status": 200,
+      "title": "Leistungen | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 48,
+      "metaDescLen": 95,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Leistungen",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/patienteninfo/",
+      "status": 200,
+      "title": "Patienteninfo | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 51,
+      "metaDescLen": 115,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Patienteninfo",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/bewertungen/",
+      "status": 200,
+      "title": "Bewertungen | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 49,
+      "metaDescLen": 59,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Bewertungen",
+      "h2count": 2,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/kontakt/",
+      "status": 200,
+      "title": "Kontakt & Anfahrt | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 55,
+      "metaDescLen": 113,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Kontakt & Anfahrt",
+      "h2count": 1,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/termin/",
+      "status": 200,
+      "title": "Terminanfrage senden | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 58,
+      "metaDescLen": 65,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Terminanfrage senden",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/blog/",
+      "status": 200,
+      "title": "Blog | HNO Alici Wien | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 59,
+      "metaDescLen": 52,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Blog",
+      "h2count": 2,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 16,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/impressum/",
+      "status": 200,
+      "title": "Impressum | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 47,
+      "metaDescLen": 88,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Impressum",
+      "h2count": 5,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/datenschutz/",
+      "status": 200,
+      "title": "Datenschutzerklärung | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 58,
+      "metaDescLen": 118,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Datenschutzerklärung",
+      "h2count": 9,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/cookie-richtlinie/",
+      "status": 200,
+      "title": "Cookie-Richtlinie | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 55,
+      "metaDescLen": 124,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Cookie-Richtlinie",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/haftungsausschluss/",
+      "status": 200,
+      "title": "Haftungsausschluss & Medizinischer Hinweis | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 80,
+      "metaDescLen": 84,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Haftungsausschluss & Medizinischer Hinweis",
+      "h2count": 5,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/tuerkischer-hno-arzt-wien/",
+      "status": 200,
+      "title": "Türkischer HNO Arzt Wien | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 62,
+      "metaDescLen": 132,
+      "canonical": "https://hno-alici.at/de/tuerkischer-hno-arzt-wien/",
+      "h1Count": 1,
+      "h1": "Türkischsprachiger HNO-Arzt in Wien Favoriten",
+      "h2count": 3,
+      "hreflangCount": 2,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/kinder-hno-wien-1100/",
+      "status": 200,
+      "title": "Kinder HNO Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 58,
+      "metaDescLen": 107,
+      "canonical": "https://hno-alici.at/de/kinder-hno-wien-1100/",
+      "h1Count": 1,
+      "h1": "Kinder-HNO in Wien Favoriten – einfühlsam & erfahren",
+      "h2count": 2,
+      "hreflangCount": 2,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/allgemeine-hno/",
+      "status": 200,
+      "title": "Allgemeine HNO Wien Favoriten | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 67,
+      "metaDescLen": 116,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Allgemeine HNO Wien 1100",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/kinder-hno/",
+      "status": 200,
+      "title": "Kinder HNO Wien Favoriten | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 63,
+      "metaDescLen": 126,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Kinder HNO Wien 1100",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/allergologie/",
+      "status": 200,
+      "title": "Allergietest Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 60,
+      "metaDescLen": 109,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Allergietest Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/hoertest/",
+      "status": 200,
+      "title": "Hörtest & Hörmessung Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 68,
+      "metaDescLen": 74,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Hörtest Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/schwindel/",
+      "status": 200,
+      "title": "Schwindel Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 57,
+      "metaDescLen": 72,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Schwindel Abklärung Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/schnarchen/",
+      "status": 200,
+      "title": "Schnarchen Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 58,
+      "metaDescLen": 73,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Schnarchen Behandlung Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/leistungen/stimmstoerungen/",
+      "status": 200,
+      "title": "Stimmstörungen & Heiserkeit Wien 1100 | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 75,
+      "metaDescLen": 73,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Stimmstörungen Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/blog/ohrenschmerzen-kind-wien/",
+      "status": 200,
+      "title": "Ohrenschmerzen beim Kind – wann zum HNO-Arzt? | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 83,
+      "metaDescLen": 102,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Ohrenschmerzen beim Kind – wann zum HNO-Arzt?",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/de/blog/allergietest-wien/",
+      "status": 200,
+      "title": "Allergietest in Wien – Ablauf und Vorbereitung | Dr. Ümit Alici – HNO Wien Favoriten",
+      "titleLen": 84,
+      "metaDescLen": 102,
+      "canonical": "https://hno-alici.at/de/",
+      "h1Count": 1,
+      "h1": "Allergietest in Wien – Ablauf und Vorbereitung",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/",
+      "status": 200,
+      "title": "Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 35,
+      "metaDescLen": 100,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Dr. Ümit Alici",
+      "h2count": 11,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic",
+        "FAQPage"
+      ],
+      "internalLinks": 18,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/team/",
+      "status": 200,
+      "title": "Team | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 42,
+      "metaDescLen": 113,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Ekip",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/dr-uemit-alici/",
+      "status": 200,
+      "title": "Wien'de KBB için güvenilir adresiniz | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 74,
+      "metaDescLen": 155,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Dr. Ümit Alici",
+      "h2count": 5,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 18,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/dr-uemit-alici/lebenslauf/",
+      "status": 200,
+      "title": "Özgeçmiş | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 46,
+      "metaDescLen": 93,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Özgeçmiş",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/dr-uemit-alici/qualifikationen/",
+      "status": 200,
+      "title": "Nitelikler | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 48,
+      "metaDescLen": 122,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Nitelikler",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/dr-uemit-alici/philosophie/",
+      "status": 200,
+      "title": "Felsefe | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 45,
+      "metaDescLen": 153,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Felsefe",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/",
+      "status": 200,
+      "title": "Hizmetler | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 47,
+      "metaDescLen": 77,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Hizmetler",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/patienteninfo/",
+      "status": 200,
+      "title": "Hasta Bilgisi | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 51,
+      "metaDescLen": 108,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Hasta Bilgisi",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/bewertungen/",
+      "status": 200,
+      "title": "Değerlendirmeler | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 54,
+      "metaDescLen": 48,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Değerlendirmeler",
+      "h2count": 2,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/kontakt/",
+      "status": 200,
+      "title": "Kontakt & Anfahrt | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 55,
+      "metaDescLen": 98,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "İletişim & Ulaşım",
+      "h2count": 1,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/termin/",
+      "status": 200,
+      "title": "Randevu Talebi Gönder | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 59,
+      "metaDescLen": 57,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Randevu Talebi Gönder",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/blog/",
+      "status": 200,
+      "title": "Blog | HNO Alici | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 54,
+      "metaDescLen": 21,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Blog",
+      "h2count": 2,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 16,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/impressum/",
+      "status": 200,
+      "title": "Künye (Impressum) | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 55,
+      "metaDescLen": 84,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Künye (Impressum)",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/datenschutz/",
+      "status": 200,
+      "title": "Gizlilik Politikası | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 57,
+      "metaDescLen": 98,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Gizlilik Politikası",
+      "h2count": 9,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/cookie-richtlinie/",
+      "status": 200,
+      "title": "Çerez Politikası | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 54,
+      "metaDescLen": 119,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Çerez Politikası",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/haftungsausschluss/",
+      "status": 200,
+      "title": "Sorumluluk Reddi ve Tıbbi Uyarı | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 69,
+      "metaDescLen": 87,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Sorumluluk Reddi ve Tıbbi Uyarı",
+      "h2count": 5,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/turk-kbb-doktoru-wien/",
+      "status": 200,
+      "title": "Türk KBB Doktoru Wien | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 59,
+      "metaDescLen": 123,
+      "canonical": "https://hno-alici.at/tr/turk-kbb-doktoru-wien/",
+      "h1Count": 1,
+      "h1": "Wien Favoriten'de Türkçe konuşan KBB doktoru",
+      "h2count": 3,
+      "hreflangCount": 2,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 14,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/cocuk-kbb-wien-1100/",
+      "status": 200,
+      "title": "Çocuk KBB Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 57,
+      "metaDescLen": 77,
+      "canonical": "https://hno-alici.at/tr/cocuk-kbb-wien-1100/",
+      "h1Count": 1,
+      "h1": "Wien Favoriten'de Çocuk KBB – nazik ve deneyimli",
+      "h2count": 2,
+      "hreflangCount": 2,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/allgemeine-hno/",
+      "status": 200,
+      "title": "Genel KBB Wien Favoriten | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 62,
+      "metaDescLen": 103,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Genel KBB Wien 1100",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/kinder-hno/",
+      "status": 200,
+      "title": "Çocuk KBB Wien Favoriten | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 62,
+      "metaDescLen": 99,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Çocuk KBB Wien 1100",
+      "h2count": 4,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/allergologie/",
+      "status": 200,
+      "title": "Alerji testi Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 60,
+      "metaDescLen": 75,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Alerji testi Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/hoertest/",
+      "status": 200,
+      "title": "İşitme testi Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 60,
+      "metaDescLen": 44,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "İşitme testi Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/schwindel/",
+      "status": 200,
+      "title": "Baş dönmesi Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 59,
+      "metaDescLen": 67,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Baş dönmesi araştırması Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/schnarchen/",
+      "status": 200,
+      "title": "Horlama Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 55,
+      "metaDescLen": 60,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Horlama tedavisi Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/leistungen/stimmstoerungen/",
+      "status": 200,
+      "title": "Ses bozuklukları Wien 1100 | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 64,
+      "metaDescLen": 64,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Ses bozuklukları Wien",
+      "h2count": 3,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 17,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/blog/ohrenschmerzen-kind-wien/",
+      "status": 200,
+      "title": "Çocukta kulak ağrısı – ne zaman KBB doktoruna? | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 84,
+      "metaDescLen": 75,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Çocukta kulak ağrısı – ne zaman KBB doktoruna?",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    },
+    {
+      "path": "/tr/blog/allergietest-wien/",
+      "status": 200,
+      "title": "Wien'de alerji testi – süreç ve hazırlık | Dr. Ümit Alici – KBB Wien Favoriten",
+      "titleLen": 78,
+      "metaDescLen": 77,
+      "canonical": "https://hno-alici.at/tr/",
+      "h1Count": 1,
+      "h1": "Wien'de alerji testi – süreç ve hazırlık",
+      "h2count": 0,
+      "hreflangCount": 3,
+      "ogComplete": true,
+      "jsonLdTypes": [
+        "Physician",
+        "MedicalClinic"
+      ],
+      "internalLinks": 15,
+      "robotsMeta": "(none)"
+    }
+  ],
+  "duplicateTitles": [],
+  "duplicateDescs": []
+}

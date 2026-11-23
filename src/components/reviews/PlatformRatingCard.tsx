@@ -42,17 +42,17 @@ export function PlatformRatingCard({
           <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
         </svg>
       )}
-      <p className={`text-sm font-semibold uppercase tracking-widest ${highlight ? "text-gold" : "text-gold"}`}>
+      <p className={`text-sm font-semibold uppercase tracking-widest ${highlight ? "text-gold-light" : "text-gold-ink"}`}>
         {name}
       </p>
       <p className={`mt-2 font-display text-4xl font-semibold ${highlight ? "text-white" : "text-petrol"}`}>
         {rating.toFixed(1)}
       </p>
-      <StarRating rating={rating} className="mt-2 justify-center" />
+      <StarRating rating={rating} className="mt-2 justify-center" tone={highlight ? "dark" : "light"} />
       <p className={`mt-3 text-sm ${highlight ? "text-white/70" : "text-text-muted"}`}>
         {reviewsLabel}
       </p>
-      <span className={`mt-4 text-xs font-semibold uppercase tracking-wider ${highlight ? "text-gold group-hover:text-gold-light" : "text-petrol group-hover:text-petrol-light"}`}>
+      <span className={`mt-4 text-xs font-semibold uppercase tracking-wider ${highlight ? "text-gold-light group-hover:text-white" : "text-petrol group-hover:text-petrol-light"}`}>
         {lang === "tr" ? "Görüntüle →" : "Ansehen →"}
       </span>
     </Link>

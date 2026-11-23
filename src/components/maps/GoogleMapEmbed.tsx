@@ -38,8 +38,10 @@ export function GoogleMapEmbed({
     window.dispatchEvent(new CustomEvent("consent-updated", { detail: state }));
   };
 
+  // mapsEmbedQuery is a technical Google-Maps-embed parameter, never
+  // Sanity-overridable (see reviews.ts's merge comment) — always set locally.
   const embedSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
-    reviewPlatforms.google.mapsEmbedQuery,
+    reviewPlatforms.google.mapsEmbedQuery!,
   )}&hl=${lang}&z=16&ie=UTF8&iwloc=&output=embed`;
 
   const showMap = consent?.externalMedia === true;
@@ -105,12 +107,23 @@ export function GoogleMapEmbed({
   );
 }
 
-export function MapDirectionsPanel({ lang }: { lang: "de" | "tr" }) {
+export function MapDirectionsPanel({
+  lang,
+  headingLevel = "h3",
+}: {
+  lang: "de" | "tr";
+  // /bewertungen nests this under its own h2, so h3 is correct there
+  // (the default). /kontakt has no h2 above this section at all, so it
+  // passes "h2" explicitly — real Lighthouse "heading-order" finding,
+  // 2026-11-22 audit; same text/styling either way, semantics only.
+  headingLevel?: "h2" | "h3";
+}) {
+  const Heading = headingLevel;
   return (
     <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-cream-dark">
-      <h3 className="font-display text-2xl font-semibold text-petrol">
+      <Heading className="font-display text-2xl font-semibold text-petrol">
         {lang === "tr" ? "Ulaşım" : "Anfahrt"}
-      </h3>
+      </Heading>
       <address className="mt-4 space-y-2 not-italic text-text-muted">
         <p className="font-medium text-petrol">
           {siteConfig.address.street}, {siteConfig.address.zip} {siteConfig.address.city}

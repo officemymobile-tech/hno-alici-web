@@ -17,9 +17,142 @@
       "tagline": {
         "de": "Ihr türkisch- und deutschsprachiger HNO-Facharzt in Wien Favoriten",
         "tr": "Wien Favoriten'de Türkçe ve Almanca KBB uzmanınız"
+      },
+      "ctaAppointment": {
+        "de": "Termin buchen",
+        "tr": "Randevu al"
+      }
+    },
+    "reviews": {
+      "title": { "de": "Bewertungen", "tr": "Değerlendirmeler" },
+      "subtitle": {
+        "de": "Das sagen unsere Patienten auf Google, DocFinder und Herold",
+        "tr": "Google, DocFinder ve Herold'daki hasta yorumları"
+      },
+      "cta": {
+        "de": "Ihre Meinung zählt – teilen Sie Ihre Erfahrung auf Google",
+        "tr": "Görüşünüz önemli – deneyiminizi Google'da paylaşın"
+      },
+      "writeReview": { "de": "Auf Google bewerten", "tr": "Google'da değerlendir" }
+    },
+    "trust": {
+      "title": { "de": "Warum Patienten Dr. Alici wählen", "tr": "Hastalar neden Dr. Alici'yi seçiyor" }
+    },
+    "services": {
+      "title": { "de": "Leistungen", "tr": "Hizmetler" },
+      "subtitle": {
+        "de": "Umfassende HNO-Versorgung für die ganze Familie",
+        "tr": "Tüm aile için kapsamlı KBB bakımı"
+      }
+    },
+    "acute": {
+      "title": { "de": "Akute Ohrenschmerzen?", "tr": "Ani kulak ağrısı mı?" },
+      "subtitle": {
+        "de": "HNO-Beschwerden? Kurzfristige Termine möglich.",
+        "tr": "KBB şikayetleri mi? Kısa sürede randevu mümkün."
+      },
+      "text": {
+        "de": "Viele HNO-Beschwerden sollten nicht warten. In unserer Ordination in Wien Favoriten bemühen wir uns um zeitnahe Termine bei akuten Beschwerden.",
+        "tr": "Birçok KBB şikayeti beklememelidir. Wien Favoriten'deki muayenehanemizde acil durumlarda hızlı randevu vermeye çalışıyoruz."
+      },
+      "cta": { "de": "Jetzt anrufen", "tr": "Hemen arayın" }
+    },
+    "insurance": {
+      "title": { "de": "Alle Kassen und privat", "tr": "Tüm sigortalar ve özel" }
+    },
+    "contact": {
+      "title": { "de": "Kontakt & Anfahrt", "tr": "İletişim & Ulaşım" },
+      "maps": { "de": "Route planen", "tr": "Yol tarifi" }
+    },
+    "aktuellesMenu": {
+      "label": { "de": "Aktuelles", "tr": "Güncel" },
+      "eyebrow": { "de": "Mitteilung", "tr": "Duyuru" },
+      "emptyTitle": { "de": "Keine aktuellen Mitteilungen", "tr": "Güncel duyuru yok" },
+      "emptyText": {
+        "de": "Hier erscheinen Neuigkeiten und Hinweise der Ordination.",
+        "tr": "Muayenehane haber ve bilgilendirmeleri burada görünür."
+      }
+    },
+    "sticky": {
+      "acute": {
+        "de": "Akute Beschwerden? Kurzfristige Termine möglich",
+        "tr": "Acil şikayetler mi? Kısa sürede randevu mümkün"
+      }
+    },
+    "appointment": {
+      "title": { "de": "Terminanfrage senden", "tr": "Randevu Talebi Gönder" },
+      "subtitle": {
+        "de": "Vereinbaren Sie Ihren Besuch in der HNO-Ordination Wien Favoriten",
+        "tr": "Wien Favoriten KBB muayenehanesinde randevunuzu ayarlayın"
+      }
+    },
+    "patientInfo": {
+      "insuranceTitle": { "de": "Alle Kassen", "tr": "Tüm sigortalar" },
+      "insuranceText": {
+        "de": "Unsere Ordination ist für alle gesetzlichen Krankenkassen zugelassen. Selbstverständlich behandeln wir auch Privatpatienten.",
+        "tr": "Muayenehanemiz tüm yasal sağlık sigortaları için anlaşmalıdır. Özel hastaları da tedavi ediyoruz."
+      },
+      "acuteTitle": { "de": "Akuttermine", "tr": "Acil randevular" },
+      "acuteText": {
+        "de": "Bei plötzlichen Ohrenschmerzen, Hörverlust, Schwindel oder starken HNO-Beschwerden rufen Sie uns bitte an. Wir bemühen uns um kurzfristige Termine.",
+        "tr": "Ani kulak ağrısı, işitme kaybı, baş dönmesi veya şiddetli KBB şikayetlerinde lütfen bizi arayın. Kısa sürede randevu vermeye çalışıyoruz."
+      },
+      "downloadsTitle": { "de": "Downloads", "tr": "İndirmeler" },
+      "downloadsText": {
+        "de": "Formulare und Informationsblätter stellen wir auf Anfrage oder bei Ihrem Besuch in der Ordination bereit.",
+        "tr": "Formlar ve bilgi broşürleri talep üzerine veya muayenehanede ziyaretinizde sunulur."
+      }
+    },
+    "footer": {
+      "tagline": {
+        "de": "HNO-Ordination für Erwachsene und Kinder in Wien Favoriten",
+        "tr": "Wien Favoriten'de yetişkin ve çocuklar için KBB muayenehanesi"
+      },
+      "rights": {
+        "de": "Alle Rechte vorbehalten.",
+        "tr": "Tüm hakları saklıdır."
+      },
+      "emergency": {
+        "de": "Lebensbedrohlicher Notfall? Rufen Sie den Rettungsdienst an:",
+        "tr": "Hayati tehlike? Acil servisi arayın:"
+      },
+      "quickLinksHeading": { "de": "Schnellzugriff", "tr": "Hızlı Erişim" },
+      "patientInfoHeading": { "de": "Patienteninfo", "tr": "Hasta Bilgisi" },
+      "faqLinkLabel": { "de": "Häufige Fragen", "tr": "Sık Sorulan Sorular" },
+      "legalHeading": { "de": "Rechtliches", "tr": "Yasal" },
+      "followHeading": { "de": "Folgen Sie uns", "tr": "Bizi takip edin" },
+      "imprint": { "de": "Impressum", "tr": "Künye" },
+      "privacy": { "de": "Datenschutz", "tr": "Gizlilik" },
+      "cookies": { "de": "Cookie-Richtlinie", "tr": "Çerez politikası" },
+      "disclaimer": { "de": "Haftungsausschluss", "tr": "Sorumluluk reddi" },
+      "cookieSettings": { "de": "Cookie-Einstellungen", "tr": "Çerez ayarları" }
+    },
+    "nav": {
+      "ordination": { "de": "Ordination", "tr": "Muayenehane" },
+      "team": { "de": "Team", "tr": "Ekip" },
+      "reviews": { "de": "Bewertungen", "tr": "Değerlendirmeler" },
+      "contact": { "de": "Kontakt", "tr": "İletişim" },
+      "about": { "de": "Dr. Ümit Alici", "tr": "Doktor Hakkında" }
+    },
+    "heroBadges": {
+      "family": {
+        "de": "Erwachsene & Kinder",
+        "tr": "Yetişkin ve Çocuk"
+      },
+      "diagnostics": {
+        "de": "Moderne Diagnostik",
+        "tr": "Modern Teşhis"
+      },
+      "trust": {
+        "de": "Erfahren & Vertrauensvoll",
+        "tr": "Deneyimli ve Güvenilir"
       }
     },
     "about": {
+      "eyebrow": {
+        "de": "Ihr HNO-Facharzt",
+        "tr": "KBB Uzmanınız"
+      },
       "title": {
         "de": "Ihr Ansprechpartner für HNO in Wien",
         "tr": "Wien'de KBB için güvenilir adresiniz"
@@ -28,12 +161,46 @@
         "de": "Dr. Ümit Alici ist Facharzt für Hals-, Nasen- und Ohrenheilkunde und der vertrauensvolle Ansprechpartner unserer Ordination in Wien Favoriten. Patienten schätzen seine ruhige Art, seine Erfahrung in der Kinder-HNO und die Möglichkeit, auf Deutsch und Türkisch beraten zu werden.",
         "tr": "Dr. Ümit Alici, Kulak Burun Boğaz uzmanıdır ve Wien Favoriten muayenehanemizin güvenilir hekimidir. Hastalar sakin yaklaşımını, çocuk KBB deneyimini ve Almanca ile Türkçe danışmanlığı takdir eder."
       },
+      "whyHno": {
+        "de": "Die HNO-Heilkunde verbindet präzise Diagnostik mit spürbaren Verbesserungen im Alltag – ob beim Hören, Atmen, Schlucken oder bei Schwindel. Genau diese Verbindung macht dieses Fach für mich so bedeutsam.",
+        "tr": "KBB, hassas teşhis ile günlük yaşamda hissedilir iyileşmeleri birleştirir – işitme, nefes alma, yutma veya baş dönmesi. Bu bağ beni bu branşa bağlıyor."
+      },
+      "expectations": {
+        "de": "Was Sie erwarten dürfen: eine gründliche Anamnese, moderne Diagnostik, klare Empfehlungen und eine Ordination, in der Sie sich ernst genommen fühlen – als Erwachsener wie als Kind.",
+        "tr": "Bekleyebilecekleriniz: kapsamlı anamnez, modern teşhis, net öneriler ve kendinizi ciddiye alındığınız hissettiğiniz bir muayenehane – yetişkin veya çocuk fark etmez."
+      },
       "philosophy": {
         "de": "Für mich steht der Mensch im Mittelpunkt – nicht nur die Diagnose. Ich nehme mir Zeit für Ihre Beschwerden, erkläre verständlich und begleite Sie von der ersten Untersuchung bis zur Therapie.",
         "tr": "Benim için önemli olan yalnızca teşhis değil, insandır. Şikayetleriniz için zaman ayırır, anlaşılır şekilde açıklar ve ilk muayeneden tedaviye kadar yanınızda olurum."
       }
     },
+    "leistungenOverview": {
+      "intro": {
+        "de": "Sämtliche akute und chronische Erkrankungen im HNO Bereich werden diagnostiziert und behandelt.",
+        "tr": "KBB alanındaki tüm akut ve kronik hastalıklar teşhis edilir ve tedavi edilir."
+      },
+      "acuteNote": {
+        "de": "Bei akuten Beschwerden vergeben wir sehr kurzfristige Termine!",
+        "tr": "Acil şikayetlerde çok kısa sürede randevu veriyoruz!"
+      },
+      "allgemeine-hnoTitle": { "de": "Allgemeine HNO Untersuchungen", "tr": "Genel KBB Muayeneleri" },
+      "allgemeine-hnoDescription": {
+        "de": "Untersuchung und Behandlung der Ohren, des Gehörs, der Gleichgewichtsorgane, der Nase, des Nasenrachens und des Kehlkopfes",
+        "tr": "Kulaklar, işitme, denge organları, burun, nazofarenks ve gırtlak muayenesi ve tedavisi"
+      },
+      "kinder-hnoTitle": { "de": "Kinder HNO", "tr": "Çocuk KBB" },
+      "kinder-hnoSubtitle": {
+        "de": "Terminvergabe am gleichen Tag bei akuten Beschwerden.",
+        "tr": "Acil şikayetlerde aynı gün randevu."
+      },
+      "allergologieTitle": { "de": "Allergieabklärung", "tr": "Alerji Araştırması" },
+      "allergologieDescription": {
+        "de": "Bei Patienten mit Allergiesymptomatik der Nase, Augen und Rachen führen wir einen Allergietest durch.",
+        "tr": "Burun, göz ve boğaz alerji belirtileri olan hastalarda alerji testi yapıyoruz."
+      }
+    },
     "hours": {
+      "title": { "de": "Ordinationszeiten", "tr": "Muayene saatleri" },
       "mondayHours": {
         "de": "09:00–13:00 & 14:00–19:00",
         "tr": "09:00–13:00 & 14:00–19:00"

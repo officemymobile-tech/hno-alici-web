@@ -1,0 +1,57 @@
+=== 1. Uploading images (Sanity dedupes identical files by hash) ===
+  ordination-hero-pro.jpg -> image-40c3b4047d60106d88afe897c2ce5898ba3e68d4-1536x1024-png
+  dr-alici-portrait-pro.jpg -> image-80f74f05ba1ed6ea290ef39889004952d6768e42-1024x683-jpg
+  dr-meier-pro.jpg -> image-f7329c27dc6cdc60fd6e33af63258b48a71bf3c6-682x1024-jpg
+  team-fr-alici-pro.jpg -> image-c95cb589d210a3c30fcc7ab557ff8b20bdc26813-1536x1024-png
+  leistungen-overview-pro.jpg -> image-e896343d2088ea69c1c4f83bd14c16cb7f211399-1536x1024-png
+  leistungen-foto-09-pro.jpg -> image-50088a1f5264a7a89281d3a6c21fbd18850fcb0d-1536x1024-png
+  leistungen-foto-10-pro.jpg -> image-68ae5ea5e9e20e84b9f0847ac02bf097fd4f8cad-1536x1024-png
+
+=== 2. siteSettings ===
+  siteSettings migrated.
+
+=== 3. staffMember ===
+  staffMember.frau-ruzica-tadic
+  staffMember.frau-hatice-yildizdal
+  staffMember.frau-yaren-sertelli
+  staffMember.frau-melissa-baran
+  staffMember.frau-naila-memic
+  staffMember.frau-aya-halabia
+  staffMember.frau-melike-arslan
+  staffMember.herr-david-kanji-zach-kiesling
+  staffMember.frau-marielle-bahome
+
+=== 4. openingHours ===
+  openingHours migrated (from src/lib/opening-hours.ts's clinicSchedule — the clinic's own approved hours).
+
+=== 5. announcement ===
+  announcement.default migrated.
+
+=== 6. closurePeriod ===
+  No active vacation/closure data exists in the local source (announcements.json has no vacation entry) — nothing to migrate.
+
+=== 7. service ===
+  service.allgemeine-hno
+  service.kinder-hno
+  service.allergologie
+  service.hoertest
+  service.schwindel
+  service.schnarchen
+  service.stimmstoerungen
+
+=== 8. blogPost ===
+  blogPost.ohrenschmerzen-kind-wien
+  blogPost.allergietest-wien
+
+=== 9. doctor ===
+  doctor.dr-uemit-alici migrated.
+
+=== 10. legalDocument (verbatim text copy, no rewording) ===
+  legalDocument.privacy.de (9 sections, verbatim)
+  legalDocument.privacy.tr (9 sections, verbatim)
+  legalDocument.cookies.de (3 sections, verbatim)
+  legalDocument.cookies.tr (3 sections, verbatim)
+  legalDocument.impressum.de (5 sections, verbatim)
+  legalDocument.impressum.tr (4 sections, verbatim)
+  legalDocument.haftung.de (5 sections, verbatim)
+  legalDocument.haftung.tr (5 sections, verbatim)

@@ -120,7 +120,7 @@ export function AppointmentForm() {
         <label className="block">
           <span className="text-sm font-medium text-petrol">{labels.message}</span>
           <textarea name="message" rows={3} className="mt-1 w-full rounded-xl border border-cream-dark px-4 py-3 focus:border-petrol focus:outline-none" />
-          <span className="mt-1 block text-xs text-gold">{labels.messageHint}</span>
+          <span className="mt-1 block text-xs text-gold-ink">{labels.messageHint}</span>
         </label>
         <label className="flex items-center gap-3">
           <input name="acute" type="checkbox" className="h-5 w-5 rounded border-cream-dark text-petrol" />

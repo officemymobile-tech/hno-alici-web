@@ -3,6 +3,7 @@ import { patientReviews, reviewPlatforms } from "@/content/reviews";
 import { Button } from "@/components/ui/Button";
 import { ReviewCard } from "./ReviewCard";
 import { PlatformRatingCard } from "./PlatformRatingCard";
+import { getEditableText } from "@/lib/editable-content";
 
 export async function ReviewsSection({ compact = false }: { compact?: boolean }) {
   const t = await getTranslations("reviews");
@@ -14,13 +15,15 @@ export async function ReviewsSection({ compact = false }: { compact?: boolean })
     <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-ink">
             {lang === "tr" ? "Hasta yorumları" : "Patientenstimmen"}
           </p>
           <h2 className="mt-3 font-display text-4xl font-semibold text-petrol">
-            {t("title")}
+            {getEditableText("reviews", "title", lang, t("title"))}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">{t("subtitle")}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
+            {getEditableText("reviews", "subtitle", lang, t("subtitle"))}
+          </p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
@@ -64,7 +67,7 @@ export async function ReviewsSection({ compact = false }: { compact?: boolean })
             size="lg"
             external
           >
-            {t("writeReview")}
+            {getEditableText("reviews", "writeReview", lang, t("writeReview"))}
           </Button>
         </div>
       </div>

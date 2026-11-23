@@ -9,7 +9,7 @@ export function PageHeader({ eyebrow, title, subtitle }: PageHeaderProps) {
     <header className="gradient-hero px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         {eyebrow && (
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold-light">
             {eyebrow}
           </p>
         )}

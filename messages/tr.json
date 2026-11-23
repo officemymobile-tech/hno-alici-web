@@ -42,6 +42,7 @@
     "phone": "+43 1 6025400"
   },
   "openStatus": {
+    "checking": "Durum kontrol ediliyor …",
     "open": "Açık",
     "closed": "Kapalı",
     "todayHours": "Bugün: {hours}",
@@ -71,7 +72,12 @@
     "tagline": "Wien Favoriten'de modern KBB tıbbı",
     "ctaAppointment": "Randevu al",
     "ctaAcute": "Acil randevu",
-    "ctaAbout": "Doktoru tanıyın"
+    "ctaAbout": "Doktoru tanıyın",
+    "badges": {
+      "family": "Yetişkin ve Çocuk",
+      "diagnostics": "Modern Teşhis",
+      "trust": "Deneyimli ve Güvenilir"
+    }
   },
   "acute": {
     "title": "Ani kulak ağrısı mı?",
@@ -101,11 +107,17 @@
     }
   },
   "about": {
+    "eyebrow": "KBB Uzmanınız",
     "title": "Wien'de KBB için güvenilir adresiniz",
     "intro": "Dr. Ümit Alici, Kulak Burun Boğaz uzmanıdır ve Wien Favoriten'deki muayenehanemizin güvenilir danışmanıdır. Hastalar onun sakin tavrını, çocuk KBB deneyimini ve Almanca ile Türkçe danışmanlık imkânını takdir ediyor.",
     "philosophy": "Benim için önemli olan sadece teşhis değil, insanın kendisidir. Şikayetleriniz için zaman ayırır, anlaşılır şekilde açıklar ve ilk muayeneden tedaviye kadar yanınızda olurum.",
     "whyHno": "KBB, hassas teşhis ile günlük yaşamda hissedilir iyileşmeleri birleştirir – işitme, nefes alma, yutma veya baş dönmesi. Bu bağ beni bu branşa bağlıyor.",
-    "expectations": "Bekleyebilecekleriniz: kapsamlı anamnez, modern teşhis, net öneriler ve kendinizi ciddiye alındığınız hissettiğiniz bir muayenehane – yetişkin veya çocuk fark etmez."
+    "expectations": "Bekleyebilecekleriniz: kapsamlı anamnez, modern teşhis, net öneriler ve kendinizi ciddiye alındığınız hissettiğiniz bir muayenehane – yetişkin veya çocuk fark etmez.",
+    "checklist": [
+      "Kapsamlı anamnez & modern teşhis",
+      "Anlaşılır şekilde açıklanan net öneriler",
+      "Yetişkin ve çocuk hastalar için eşit özen"
+    ]
   },
   "services": {
     "title": "Hizmetler",
@@ -196,7 +208,7 @@
     "maps": "Yol tarifi"
   },
   "appointment": {
-    "title": "Online Randevu",
+    "title": "Randevu Talebi Gönder",
     "subtitle": "Wien Favoriten KBB muayenehanesinde randevunuzu ayarlayın",
     "text": "Randevu için bizi arayın veya e-posta gönderin. Acil şikayetlerde telefonla iletişimi öneririz.",
     "ctaPhone": "Hemen arayın",

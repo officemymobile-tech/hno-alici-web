@@ -1,11 +1,27 @@
+import type { Metadata } from "next";
 import { getLocale, setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/shared/PageHeader";
-import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { SiteImage } from "@/components/ui/SiteImage";
-import { doctors, images, teamStaff } from "@/content/site-content";
-import { getEditableImage, getEditableTeamStaff } from "@/lib/editable-content";
+import { images, teamStaff } from "@/content/site-content";
+import { doctorsList } from "@/content/doctors-list";
+import { getPageSeo } from "@/lib/page-seo";
+import { getEditableImage, getEditableImagePosition, getEditableTeamStaff } from "@/lib/editable-content";
+import { nameInitials } from "@/lib/initials";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const isTr = locale === "tr";
+  const lang = locale as "de" | "tr";
+  const { title, description } = await getPageSeo("team", lang, {
+    title: isTr ? "Team" : "Team",
+    description: isTr
+      ? "Dr. Ümit Alici, Dr. Sigrid Meier ve Dr. Benjamin Alici ile KBB muayenehanemizin ekibini tanıyın — Wien Favoriten."
+      : "Lernen Sie das Team unserer HNO-Ordination in Wien Favoriten kennen: Dr. Ümit Alici, Dr. Sigrid Meier, Dr. Benjamin Alici und unser Ordinationsteam.",
+  });
+  return { title, description };
+}
 
 export default async function TeamPage({ params }: Props) {
   const { locale } = await params;
@@ -19,29 +35,32 @@ export default async function TeamPage({ params }: Props) {
 
   const staff = getEditableTeamStaff(teamStaff);
   const heroImage = getEditableImage("ordinationHero", images.ordinationHero);
-  const portrait = getEditableImage("drAliciPortrait", images.drAliciPortrait);
-  const meierPortrait = getEditableImage("drMeierPortrait", images.drMeierPortrait);
-  const doctorPhotos: Record<string, string> = {
-    "Dr. Ümit Alici": portrait,
-    "Dr. Sigrid Meier": meierPortrait,
-    "Dr. Benjamin Alici": images.leistungenFoto10,
-  };
+  const heroImagePosition = getEditableImagePosition("ordinationHero");
 
   return (
     <>
       <PageHeader title={lang === "tr" ? "Ekip" : "Team"} />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
-          {doctors.map((doc) => (
+          {doctorsList.map((doc) => (
             <article key={doc.name} className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-cream-dark">
               <div className="relative aspect-[3/4]">
-                <SiteImage
-                  src={doctorPhotos[doc.name] ?? images.drAliciPortrait}
-                  alt={doc.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+                {doc.photo ? (
+                  <SiteImage
+                    src={doc.photo}
+                    alt={doc.name}
+                    fill
+                    className="object-cover"
+                    objectPosition={doc.photoPosition}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-petrol">
+                    <span className="font-display text-5xl font-semibold text-gold-light">
+                      {nameInitials(doc.name)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className={`p-6 ${doc.primary ? "bg-petrol text-white" : ""}`}>
                 <h2 className="font-display text-2xl font-semibold">{doc.name}</h2>
@@ -49,7 +68,7 @@ export default async function TeamPage({ params }: Props) {
                   {doc.title[lang]}
                 </p>
                 {doc.primary && (
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-gold">
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-gold-light">
                     {lang === "tr" ? "Baş hekim" : "Hauptansprechpartner"}
                   </p>
                 )}
@@ -60,19 +79,37 @@ export default async function TeamPage({ params }: Props) {
       </div>
 
       <div className="relative h-64 w-full overflow-hidden sm:h-80 lg:h-96">
-        <SiteImage src={heroImage} alt="HNO Ordination" fill className="object-cover" sizes="100vw" />
+        <SiteImage src={heroImage} alt="HNO Ordination" fill className="object-cover" objectPosition={heroImagePosition} sizes="100vw" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h2 className="text-center font-display text-3xl font-semibold text-petrol">{teamTitle}</h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {staff.map((member) => (
-            <article key={member.name} className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-sm ring-1 ring-cream-dark">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent-soft text-petrol">
-                <ServiceIcon name="health" size={22} />
-              </span>
-              <div>
-                <h3 className="font-semibold text-petrol">{member.name}</h3>
+            <article
+              key={member.name}
+              className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-cream-dark"
+            >
+              {member.photo ? (
+                <div className="relative aspect-square">
+                  <SiteImage
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    objectPosition={member.photoPosition}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-square items-center justify-center bg-petrol">
+                  <span className="font-display text-4xl font-semibold text-gold-light">
+                    {nameInitials(member.name)}
+                  </span>
+                </div>
+              )}
+              <div className="p-6">
+                <h3 className="font-display text-lg font-semibold text-petrol">{member.name}</h3>
                 <p className="mt-1 text-sm text-text-muted">{member.role[lang]}</p>
               </div>
             </article>

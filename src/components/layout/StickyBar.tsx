@@ -1,26 +1,35 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ClinicOpenStatus } from "@/components/shared/ClinicOpenStatus";
+import type { ResolvedSchedule } from "@/lib/opening-hours";
 import { siteConfig } from "@/lib/site";
+import { getEditableText } from "@/lib/editable-content";
 
-export function StickyBar() {
+type StickyBarProps = { schedule: ResolvedSchedule };
+
+export function StickyBar({ schedule }: StickyBarProps) {
   const t = useTranslations("sticky");
+  const locale = useLocale() as "de" | "tr";
 
   return (
     <div className="border-b border-white/10 bg-petrol-dark text-white text-sm">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-3 sm:gap-4">
-          <ClinicOpenStatus variant="bar" />
+          <ClinicOpenStatus variant="bar" schedule={schedule} />
           <p className="hidden min-w-0 truncate font-medium text-white/85 lg:block lg:max-w-md xl:max-w-lg">
-            {t("acute")}
+            {getEditableText("sticky", "acute", locale, t("acute"))}
           </p>
         </div>
         <a
           href={`tel:${siteConfig.phone}`}
           className="shrink-0 rounded-full bg-gold px-4 py-1.5 text-sm font-semibold text-petrol-dark transition hover:bg-gold-light"
         >
-          {t("phone")}
+          {/* Already Sanity-connected via siteConfig (siteSettings.phoneDisplay)
+              — reading it directly here instead of the separate, previously
+              duplicated sticky.phone next-intl key closes the same kind of
+              drift risk fixed on /kontakt. */}
+          {siteConfig.phoneDisplay}
         </a>
       </div>
     </div>

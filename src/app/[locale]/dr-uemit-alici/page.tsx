@@ -1,10 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations, getLocale, setRequestLocale } from "next-intl/server";
 import { SiteImage } from "@/components/ui/SiteImage";
 import { Button } from "@/components/ui/Button";
 import { doctorProfile } from "@/content/doctor-profile";
+import { getPageSeo } from "@/lib/page-seo";
+import { getEditableText } from "@/lib/editable-content";
 
 type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+  const intro = t("intro");
+  const { title, description } = await getPageSeo("dr-uemit-alici", locale as "de" | "tr", {
+    title: t("title"),
+    description: intro.length > 155 ? intro.slice(0, 152) + "..." : intro,
+  });
+  return { title, description };
+}
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
@@ -24,7 +38,16 @@ export default async function AboutPage({ params }: Props) {
       <section className="gradient-hero px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl shadow-2xl ring-4 ring-white/20">
-            <SiteImage src={doctorProfile.portrait} alt="Dr. Ümit Alici" fill priority className="object-cover" sizes="400px" />
+            <SiteImage
+              src={doctorProfile.portrait}
+              alt="Dr. Ümit Alici"
+              fill
+              preload
+              fetchPriority="high"
+              className="object-cover"
+              objectPosition={doctorProfile.portraitPosition}
+              sizes="400px"
+            />
           </div>
           <div className="text-white">
             <h1 className="font-display text-4xl font-semibold sm:text-5xl">{doctorProfile.name}</h1>
@@ -41,7 +64,9 @@ export default async function AboutPage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-lg leading-relaxed text-text-muted">{t("intro")}</p>
+        <p className="text-lg leading-relaxed text-text-muted">
+          {getEditableText("about", "intro", lang, t("intro"))}
+        </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {subpages.map((page) => (
             <Link
@@ -61,13 +86,13 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="font-display text-2xl font-semibold text-petrol">
               {lang === "tr" ? "Neden KBB?" : "Warum HNO?"}
             </h2>
-            <p className="mt-4 text-text-muted">{t("whyHno")}</p>
+            <p className="mt-4 text-text-muted">{getEditableText("about", "whyHno", lang, t("whyHno"))}</p>
           </div>
           <div>
             <h2 className="font-display text-2xl font-semibold text-petrol">
               {lang === "tr" ? "Beklentileriniz" : "Was Sie erwarten dürfen"}
             </h2>
-            <p className="mt-4 text-text-muted">{t("expectations")}</p>
+            <p className="mt-4 text-text-muted">{getEditableText("about", "expectations", lang, t("expectations"))}</p>
           </div>
         </section>
         <div className="mt-10 flex flex-wrap gap-4">
