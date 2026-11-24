@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getLocale, getTranslations } from "next-intl/server";
 import { FaqAccordion } from "@/components/shared/FaqAccordion";
 import { generalFaq } from "@/content/general-faq";
+import { jsonLdScript } from "@/lib/json-ld";
 
 export async function FaqSection() {
   const t = await getTranslations("patientInfo");
@@ -27,7 +28,7 @@ export async function FaqSection() {
     <section className="bg-white py-16 lg:py-20" aria-labelledby="home-faq-title">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
       />
       <div className="mx-auto grid min-w-0 max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div className="min-w-0">

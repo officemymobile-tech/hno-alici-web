@@ -13,6 +13,8 @@ import { siteConfig } from "@/lib/site";
 import { images } from "@/content/site-content";
 import { medicalClinicSchema, physicianSchema } from "@/lib/schema";
 import { resolvedSchedule } from "@/lib/opening-hours-source";
+import { jsonLdScript } from "@/lib/json-ld";
+import { CONTENT_SECURITY_POLICY } from "@/lib/security-headers";
 import "../globals.css";
 
 // Replaces the previous Cormorant Garamond display serif (2026-11-22,
@@ -118,12 +120,14 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${jakarta.variable} ${dmSans.variable} h-full`}>
       <head>
+        <meta httpEquiv="Content-Security-Policy" content={CONTENT_SECURITY_POLICY} />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="icon" href="/images/logo-icon.png" />
         {schemas.map((schema, i) => (
           <script
             key={i}
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+            dangerouslySetInnerHTML={{ __html: jsonLdScript(schema) }}
           />
         ))}
       </head>

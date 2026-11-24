@@ -5,6 +5,19 @@ import { getEditableImage } from "./editable-content";
 import { siteConfig } from "./site";
 import { resolvedSchedule } from "./opening-hours-source";
 
+/**
+ * getEditableImage() returns a local-relative path ("/images/...") from the
+ * fallback content, but a Sanity-overlaid value is already a full absolute
+ * CDN URL ("https://cdn.sanity.io/..."). Concatenating siteConfig.domain
+ * unconditionally only worked while CONTENT_SOURCE=sanity had never
+ * actually run with complete image data — confirmed broken (produced
+ * "https://hno-alici.athttps://cdn.sanity.io/...") once real Sanity
+ * content was restored and built for the first time, 2026-11-24.
+ */
+function absoluteImageUrl(path: string): string {
+  return /^https?:\/\//.test(path) ? path : `${siteConfig.domain}${path}`;
+}
+
 const SCHEMA_DAY_NAME: Record<number, string> = {
   0: "Sunday",
   1: "Monday",
@@ -50,7 +63,7 @@ export function physicianSchema() {
     "@context": "https://schema.org",
     "@type": "Physician",
     name: doctorProfile.name,
-    image: `${siteConfig.domain}${portrait}`,
+    image: absoluteImageUrl(portrait),
     jobTitle: doctorProfile.clinicalTitle?.de || "Facharzt für Hals-, Nasen- und Ohrenheilkunde",
     medicalSpecialty: doctorProfile.medicalSpecialties ?? ["Otolaryngology", "Pediatric Otolaryngology", "Allergy"],
     url: siteConfig.domain,
@@ -88,7 +101,7 @@ export function medicalClinicSchema() {
     url: siteConfig.domain,
     telephone: siteConfig.phoneDisplay,
     email: siteConfig.email,
-    image: `${siteConfig.domain}${heroImage}`,
+    image: absoluteImageUrl(heroImage),
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,

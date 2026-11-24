@@ -1,4 +1,5 @@
 import { routing } from "@/i18n/routing";
+import { CONTENT_SECURITY_POLICY } from "@/lib/security-headers";
 
 // next-intl's `localePrefix: "always"` has no real server/middleware under
 // `output: "export"` (no server at request time at all — GitHub Pages only
@@ -33,6 +34,8 @@ export default function RootPage() {
     <html lang={routing.defaultLocale}>
       <head>
         <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Security-Policy" content={CONTENT_SECURITY_POLICY} />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta httpEquiv="refresh" content={`0; url=${target}`} />
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href={`https://hno-alici.at${target}`} />
